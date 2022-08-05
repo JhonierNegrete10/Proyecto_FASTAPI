@@ -10,9 +10,11 @@ from sqlalchemy.future import select
 from db.databaseConfig import get_session
 
 from users.models.userModel import User
-
+from core.config import settings
 import logging
 
+from users.security.security import Hash
+# app.users.security.security
 log = logging.getLogger("uvicorn")
 
 
@@ -25,14 +27,23 @@ class CRUDUser():
         * Update 
         * update password 
         * remove user 
+        
+        -from databases import database 
+        database.fetch_all(query)
+        database.fetch_one(query)
+        database.iterate(query)
+        database.execute(query)
+        database.execute_many(query)
         """
         pass
        
         
 async def get_by_email(email, 
                        session : AsyncSession): 
-    user_query = await session.get(User, email)
-    return user_query 
+    query =select(User).where(User.email == email)
+    user_query = await session.execute(query)
+    user=  user_query.scalars().first()
+    return user
 
 
 async def get_all(session: AsyncSession): 
@@ -54,7 +65,20 @@ async def create_user(user: User ,
     await session.refresh(user)
     return user
     
-     
+    
+async def put_super_user(session: AsyncSession):
+    
+    results = await session.execute(select(User).where(User.email == settings.FIRST_SUPERUSER))
+    user = results.first()
+    if not user: 
+        log.info("SUPERUSER")
+        user = User(email= settings.FIRST_SUPERUSER, 
+                    hashed_password= Hash.hash_password(settings.FIRST_SUPERUSER_PASSWORD), 
+                    is_super_user=True)
+        session.add(user)
+        await session.commit()
+        await session.refresh(user)
+        return {"super": "initializated"}     
 
 
 # user = CRUDUser()

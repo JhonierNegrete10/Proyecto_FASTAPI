@@ -14,6 +14,7 @@ from db.databaseConfig import get_session
 
 from users.crud import userCrud 
 from users.models.userModel import *
+from users.security.security import Hash
 
 import logging
 
@@ -22,40 +23,36 @@ log = logging.getLogger("uvicorn")
 
 
 #? created user from router
-async def create_user_db(user: User, 
+async def create_user_db(user: UserIn, 
                     # user_in: UserIn,
                    session : AsyncSession
                    ):
-
+    """
+    - Input UserIn model 
+    - Hashed the password 
+    - Create user with model User of the table 
+    - Injection of the dependecy Session of the db 
+    """
     #todo user email lower 
-    # user_in = user_in.dict()
-    # user_in["email"] = user_in["email"].lower()
+    user.email = user.email.lower()
     
     #todo user exist in the db 
-    # user_query = () 
-    #     db.query(models.User)
-    #               .filter(models.User.email ==
-    #                       EmailStr(user_in["email"])))
+    user_exist = userCrud.get_by_email(user.email, session)
     
     #todo riase error 
-    # user = user_query.first()
-    # if user:
-    #     raise HTTPException(status_code=status.HTTP_409_CONFLICT,
-    #                         detail='Account already exist')
+    print(user_exist)
+    if user_exist:
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT,
+                            detail='Account already exist')
 
     #todo Hashed the password 
-    # try:
-        # user_in["hashed_password"] = Hash.hash_password(user_in["password"])
-        # del user_in["password"]
-        # # del user_in["password_confirm"]
-        # user_in["gender"] = user_in["gender"].value
+    user.hashed_password = Hash.hash_password(user.hashed_password)
 
-        # new_user = models.User(**user_in)
-
-    #todo Add the user to the db by the crud 
+    #todo change from userIn to User schema  
     log.info("endpoint: entry")
-   
     user =User(**user.dict())
+    
+    #todo: Add User to db by crud    
     user_db = await userCrud.create_user(user, session)
     return user_db
     # except Exception as e:

@@ -1,5 +1,8 @@
 asyncpg 
 aiohttp
+psycopg2-binary
+sqlmodel
+databases[postgresql]
 fastapi
 uvicorn
 SQLAlchemy
@@ -13,6 +16,3 @@ coverage
 jinja2
 email-validator
 alembic
-databases[postgresql]
-psycopg2-binary
-sqlmodel

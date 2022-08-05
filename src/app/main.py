@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 import logging
+from db.init_database import init_database
 
 from db.databaseConfig import init_db
 
@@ -29,8 +30,10 @@ async def root():
 
 @app.on_event("startup")
 async def startup_event():
-    log.info("Starting up...")
+    log.info("INIT: ___Starting up___")
     await init_db()
+    # await init_database()
+    log.info("INIT: ___end___")
 
 
 @app.on_event("shutdown")
