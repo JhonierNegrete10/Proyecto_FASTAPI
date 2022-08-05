@@ -71,7 +71,7 @@ class User(UserIn, table= True):
     updated_at:datetime =datetime.now() 
     is_active: bool = Field(default = False, 
             description="It is a active user when verify email code ")
-    # verify_code: Optional[str] = None 
+    verify_code: Optional[str] = None 
 
 class UserOut(UserBase):
     first_name: str 

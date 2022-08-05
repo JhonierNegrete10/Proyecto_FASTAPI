@@ -39,9 +39,9 @@ async def get_all(session: AsyncSession):
     # async with session as client: 
     log.info("crud: entry")
     result = await session.execute(select(User))
-    print(result)
+    # print(result)
     result = result.scalars().all()
-    print(result)
+    # print(result)
     return [user for user in result ]
 
 

@@ -2,10 +2,13 @@
 HTTP Routes 
 Web -> routers -> endpoints 
 """
+from typing import List
+
 
 from fastapi import APIRouter
 from fastapi import Depends
 from fastapi import status
+
 
 from users.endpoints.usersEndpoints import *
 
@@ -19,7 +22,9 @@ router = APIRouter(
 )
 
 @router.get("/", 
-            status_code=status.HTTP_200_OK)
+            status_code=status.HTTP_200_OK, 
+            response_model=List[UserOut], 
+            )
 async def show_users(*, session : AsyncSession = Depends(get_session)): 
     """Show all users 
     Returns:
@@ -35,7 +40,7 @@ async def show_users(*, session : AsyncSession = Depends(get_session)):
              response_model=UserOut
              )
 async def create_user(*, 
-                      user_in: User, 
+                      user_in: UserIn, 
                       session : AsyncSession = Depends(get_session)): 
     #todo: add background task to send email 
     

@@ -54,8 +54,8 @@ async def create_user_db(user: User,
 
     #todo Add the user to the db by the crud 
     log.info("endpoint: entry")
-    print(type(user), user)
-    print(User(**user.dict()))
+   
+    user =User(**user.dict())
     user_db = await userCrud.create_user(user, session)
     return user_db
     # except Exception as e:

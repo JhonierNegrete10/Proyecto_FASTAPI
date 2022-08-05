@@ -8,3 +8,11 @@ $ docker-compose up -d --build
 $ docker-compose down -v
 
 docker exec -ti
+
+docker-compose exec backend alembic upgrade head
+
+
+##Alembic 
+With the environment in place we can create a new revision, using alembic revision:
+alembic revision -m "create account table"
+
