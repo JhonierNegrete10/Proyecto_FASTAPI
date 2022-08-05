@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:14-alpine
+    restart: always
+    volumes:
+      - psqldata-async:/var/lib/postgresql/data/
+    expose:
+      - 5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=database-async
+
+  backend:
+    ports:
+      - 8000:80
+    build:
+      context: ./src
+      dockerfile: dockerfile
+    image: backend_prueba
+    volumes:
+      - ./src/app:/app
+    environment:
+      - DEBUG=false
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=database-async
+      - POSTGRES_SERVER=db
+      - POSTGRES_PORT=5432
+      - HOST_UVICORN=0.0.0.0
+    depends_on:
+      - db
+  
+volumes:
+  psqldata-async:
+    driver: local
+
+
+
+
+    

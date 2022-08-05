@@ -1,0 +1,10 @@
+docker build -t img-python-example .  
+-t tag: name 
+-f file: filename 
+
+docker run --rm -it img-python-example
+
+$ docker-compose up -d --build
+$ docker-compose down -v
+
+docker exec -ti

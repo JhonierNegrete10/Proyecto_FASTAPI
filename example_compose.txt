@@ -1,0 +1,185 @@
+version: '3'
+services:
+  db:
+    image: postgres:10.17
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=coffee-database
+    volumes:
+      - psqldata-meed:/var/lib/postgresql/data
+  db_coffee:
+    image: postgres:10.17
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=coffee-database
+    volumes:
+      - psqldata-coffee:/var/lib/postgresql/data
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./config/prometheus:/etc/prometheus
+      - prometheus-data:/prometheus
+    restart: unless-stopped
+    command: 
+      - "--config.file=/etc/prometheus/prometheus.yml"
+    
+  node_exporter:
+    image: quay.io/prometheus/node-exporter:latest
+    container_name: node_exporter
+    command:
+      - '--path.rootfs=/host'
+    pid: host
+    restart: unless-stopped
+    volumes:
+      - '/:/host:ro,rslave'
+
+  cadvisor:
+    image: google/cadvisor:latest
+    container_name: cadvisor
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk:ro
+    devices:
+      - /dev/kmsg
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana-oss:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+    restart: unless-stopped
+    
+  backend:
+    image: IMAGE_TAG 
+    restart: on-failure:10
+    environment:
+      - DEBUG=false
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=coffee-database
+      - POSTGRES_SERVER=db
+      - POSTGRES_PORT=5432
+      - HOST_UVICORN=0.0.0.0
+      - GOOGLE_CLIENT_ID=351741818588-rlqlrr2qk3oao97lu7adgaaav36spi1s.apps.googleusercontent.com
+      - GOOGLE_CLIENT_SECRET=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
+      - REDIRECT_URI=api.elcamino.membo.pro
+      - FACEBOOK_CLIENT_ID=1100592230549258
+      - FACEBOOK_SECRET_KEY=1e57785f6d7c991eaa3748bccc7e29b1
+      - SECRET_KEY=09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7
+      - ALGORITHM=HS256
+    depends_on:
+      - db
+    labels: # new
+      - "traefik.enable=true"
+      - "traefik.http.routers.fastapi.rule=Host(`api.elcamino.membo.pro`)" # TODO: Change this url
+      - "traefik.http.routers.fastapi.tls=true"
+      - "traefik.http.routers.fastapi.tls.certresolver=letsencrypt"
+  coffee:
+    image: IMAGE_TAG 
+    restart: on-failure:5
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=coffee-database
+      - POSTGRES_SERVER=db_coffee
+      - POSTGRES_PORT=5432
+    depends_on:
+      - db_coffee
+    labels: # new
+      - traefik.enable=true
+      - traefik.http.routers.coffee.rule=Host(`api.elcamino.membo.pro`) && PathPrefix(`/coffee`)
+      - traefik.http.services.coffee.loadbalancer.server.port=81
+      - traefik.http.routers.coffee.tls=true"
+      - traefik.http.routers.coffee.tls.certresolver=letsencrypt
+  traefik:  # new
+    build:
+      context: .
+      dockerfile: Dockerfile.traefik
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "./traefik-public-certificates:/certificates"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.middlewares.auth.basicauth.users=testuser:$$apr1$$4jcY3PJ8$$bZOQOztciSE9JFVDfDE7N1" # Generate new user
+
+
+volumes:
+  psqldata-meed:
+    driver: local
+  psqldata-coffee:
+    driver: local
+  prometheus-data:
+    driver: local
+  grafana-data:
+    driver: local
+
+
+version: '3'
+services:
+  backend:
+    ports:
+      - 8100:80
+    build:
+      context: ./backend
+      dockerfile: backend.dockerfile
+    image: backend
+    environment:
+      - DEBUG=true
+      - GOOGLE_CLIENT_ID=787812913232-sq3ovp0nb1gqogcvmag7j56q8vkjkotb.apps.googleusercontent.com
+      - GOOGLE_CLIENT_SECRET=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
+      - REDIRECT_URI=localhost
+      - HOST_UVICORN=0.0.0.0
+      - FACEBOOK_CLIENT_ID=1100592230549258
+      - FACEBOOK_SECRET_KEY=1e57785f6d7c991eaa3748bccc7e29b1
+      - SERVER_HOST=smtp.mailtrap.io
+      - SMTP_USER=710bbd08af5fed
+      - SMTP_PASSWORD=5a9d0bebd15f29
+      - EMAIL_PORT=2525
+      - EMAIL_FROM_EMAILS=test@admin.com
+      - NAME_FROM_EMAILS=admin
+    volumes:
+      - ./backend/app:/app
+
+
+
+#########################################################
+version: '3.6'
+
+services:
+
+  web:
+    build: .
+    ports:
+      - 5001:5000
+    environment:
+      - FLASK_DEBUG=1
+      - APP_SETTINGS=project.config.DevelopmentConfig
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/users
+    depends_on:
+      - db
+
+  db:
+    build:
+      context: ./project/db
+      dockerfile: Dockerfile
+    ports:
+      - 5435:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
