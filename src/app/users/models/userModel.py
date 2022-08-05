@@ -37,11 +37,11 @@ class UserLogin(UserBase):
         max_length=64,
         default = "12345678"
     )
-    
-#models of the tables, in the db  
-#Schema Of the user in the database  
-class User(UserBase, table= True): 
-    password:str = Field(
+
+
+class UserIn(UserBase): 
+    birth_date: Optional[date] =Field(default=date(2000,1,1))  
+    hased_password:str = Field(
         min_length=8,
         max_length=64,
         default="12345678"
@@ -60,12 +60,21 @@ class User(UserBase, table= True):
     phone:str = Field(
         default = "300122344"
     )
+     
+
+        
+#models of the tables, in the db  
+#Schema Of the user in the database  
+class User(UserIn, table= True): 
     photo: Optional[str] = None
     created_at:datetime =datetime.now() 
     updated_at:datetime =datetime.now() 
-    birth_date: Optional[date] =Field(default=date(2000,1,1))  
     is_active: bool = Field(default = False, 
-                                      description="It is a active user when verify email code ")
+            description="It is a active user when verify email code ")
+    # verify_code: Optional[str] = None 
 
-
-
+class UserOut(UserBase):
+    first_name: str 
+    last_name: str 
+     
+    

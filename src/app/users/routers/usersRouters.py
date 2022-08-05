@@ -32,6 +32,7 @@ async def show_users(*, session : AsyncSession = Depends(get_session)):
     return data
     
 @router.post("/", 
+             response_model=UserOut
              )
 async def create_user(*, 
                       user_in: User, 
@@ -39,6 +40,7 @@ async def create_user(*,
     #todo: add background task to send email 
     
     #* Entrypoint to endpoint manage 
+    user_out = await create_user_db(user_in, session)
     
-    data = await create_user_db(user_in, session)
-    return {"user": "created"}
+    return user_out 
+

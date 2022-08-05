@@ -4381,3 +4381,442 @@ FROM "user"
 05-Aug-22 12:41:27 - sqlalchemy.engine.Engine - INFO - [generated in 0.00052s] ('user',)
 05-Aug-22 12:41:27 - sqlalchemy.engine.Engine - INFO - COMMIT
 05-Aug-22 12:41:27 - uvicorn.error - INFO - Application startup complete.
+05-Aug-22 13:05:08 - uvicorn.error - WARNING - StatReload detected changes in 'users/models/userModel.py'. Reloading...
+05-Aug-22 13:05:08 - uvicorn.error - INFO - Shutting down
+05-Aug-22 13:05:08 - uvicorn.error - INFO - Waiting for application shutdown.
+05-Aug-22 13:05:08 - uvicorn - INFO - Shutting down...
+05-Aug-22 13:05:08 - uvicorn.error - INFO - Application shutdown complete.
+05-Aug-22 13:05:08 - uvicorn.error - INFO - Finished server process [9]
+05-Aug-22 13:05:09 - uvicorn.error - INFO - Started server process [12]
+05-Aug-22 13:05:09 - uvicorn.error - INFO - Waiting for application startup.
+05-Aug-22 13:05:09 - uvicorn - INFO - Starting up...
+05-Aug-22 13:05:09 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+05-Aug-22 13:05:09 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:05:09 - sqlalchemy.engine.Engine - INFO - select current_schema()
+05-Aug-22 13:05:09 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:05:09 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+05-Aug-22 13:05:09 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:05:09 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+05-Aug-22 13:05:09 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+05-Aug-22 13:05:09 - sqlalchemy.engine.Engine - INFO - [generated in 0.00055s] ('user',)
+05-Aug-22 13:05:09 - sqlalchemy.engine.Engine - INFO - COMMIT
+05-Aug-22 13:05:09 - uvicorn.error - INFO - Application startup complete.
+05-Aug-22 13:05:58 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+05-Aug-22 13:05:58 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+05-Aug-22 13:05:58 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+05-Aug-22 13:05:59 - uvicorn.error - INFO - Started server process [9]
+05-Aug-22 13:05:59 - uvicorn.error - INFO - Waiting for application startup.
+05-Aug-22 13:05:59 - uvicorn - INFO - Starting up...
+05-Aug-22 13:05:59 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+05-Aug-22 13:05:59 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:05:59 - sqlalchemy.engine.Engine - INFO - select current_schema()
+05-Aug-22 13:05:59 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:05:59 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+05-Aug-22 13:05:59 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:05:59 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+05-Aug-22 13:05:59 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+05-Aug-22 13:05:59 - sqlalchemy.engine.Engine - INFO - [generated in 0.00037s] ('user',)
+05-Aug-22 13:05:59 - sqlalchemy.engine.Engine - INFO - COMMIT
+05-Aug-22 13:05:59 - uvicorn.error - INFO - Application startup complete.
+05-Aug-22 13:08:31 - uvicorn.error - WARNING - StatReload detected changes in 'users/models/userModel.py'. Reloading...
+05-Aug-22 13:08:31 - uvicorn.error - INFO - Shutting down
+05-Aug-22 13:08:31 - uvicorn.error - INFO - Waiting for application shutdown.
+05-Aug-22 13:08:31 - uvicorn - INFO - Shutting down...
+05-Aug-22 13:08:31 - uvicorn.error - INFO - Application shutdown complete.
+05-Aug-22 13:08:31 - uvicorn.error - INFO - Finished server process [9]
+05-Aug-22 13:08:33 - uvicorn.error - INFO - Started server process [12]
+05-Aug-22 13:08:33 - uvicorn.error - INFO - Waiting for application startup.
+05-Aug-22 13:08:33 - uvicorn - INFO - Starting up...
+05-Aug-22 13:08:33 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+05-Aug-22 13:08:33 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:08:33 - sqlalchemy.engine.Engine - INFO - select current_schema()
+05-Aug-22 13:08:33 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:08:33 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+05-Aug-22 13:08:33 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:08:33 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+05-Aug-22 13:08:33 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+05-Aug-22 13:08:33 - sqlalchemy.engine.Engine - INFO - [generated in 0.00147s] ('user',)
+05-Aug-22 13:08:33 - sqlalchemy.engine.Engine - INFO - COMMIT
+05-Aug-22 13:08:33 - uvicorn.error - INFO - Application startup complete.
+05-Aug-22 13:08:50 - uvicorn - INFO - endpoint: entry
+05-Aug-22 13:08:50 - uvicorn - INFO - crud: entry
+05-Aug-22 13:08:50 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+05-Aug-22 13:08:50 - sqlalchemy.engine.Engine - INFO - INSERT INTO "user" (email, password, first_name, last_name, gender, phone, photo, created_at, updated_at, birth_date, is_active, verify_code) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+05-Aug-22 13:08:50 - sqlalchemy.engine.Engine - INFO - [generated in 0.00145s] ('user@example.com', '12345678', 'Ándres', 'López Gómez', 'male', '300122344', 'string', datetime.datetime(2022, 8, 5, 13, 8, 33, 331150), datetime.datetime(2022, 8, 5, 13, 8, 33, 331162), datetime.date(2000, 1, 1), False, 'string')
+05-Aug-22 13:08:50 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+05-Aug-22 13:08:50 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 418, in _prepare_and_execute
+    prepared_stmt, attributes = await adapt_connection._prepare(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 660, in _prepare
+    prepared_stmt = await self._connection.prepare(operation)
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 566, in prepare
+    return await self._prepare(
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 584, in _prepare
+    stmt = await self._get_statement(
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 398, in _get_statement
+    statement = await self._protocol.prepare(
+  File "asyncpg/protocol/protocol.pyx", line 168, in prepare
+asyncpg.exceptions.UndefinedColumnError: column "verify_code" of relation "user" does not exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 479, in execute
+    self._adapt_connection.await_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 454, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 389, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 682, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.ProgrammingError: <class 'asyncpg.exceptions.UndefinedColumnError'>: column "verify_code" of relation "user" does not exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.9/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.9/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.9/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/usr/local/lib/python3.9/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.9/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/usr/local/lib/python3.9/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.9/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.9/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/app/users/routers/usersRouters.py", line 43, in create_user
+    user_out = await create_user_db(user_in, session)
+  File "/app/users/endpoints/usersEndpoints.py", line 59, in create_user_db
+    user_db = await userCrud.create_user(user, session)
+  File "/app/users/crud/userCrud.py", line 53, in create_user
+    await session.commit()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/session.py", line 580, in commit
+    return await greenlet_spawn(self.sync_session.commit)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 128, in greenlet_spawn
+    result = context.switch(value)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1451, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3383, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3523, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3483, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 1097, in _emit_insert_statements
+    c = connection._execute_20(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 332, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 479, in execute
+    self._adapt_connection.await_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 454, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 389, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 682, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column "verify_code" of relation "user" does not exist
+[SQL: INSERT INTO "user" (email, password, first_name, last_name, gender, phone, photo, created_at, updated_at, birth_date, is_active, verify_code) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)]
+[parameters: ('user@example.com', '12345678', 'Ándres', 'López Gómez', 'male', '300122344', 'string', datetime.datetime(2022, 8, 5, 13, 8, 33, 331150), datetime.datetime(2022, 8, 5, 13, 8, 33, 331162), datetime.date(2000, 1, 1), False, 'string')]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+05-Aug-22 13:09:44 - uvicorn.error - WARNING - StatReload detected changes in 'users/models/userModel.py'. Reloading...
+05-Aug-22 13:09:44 - uvicorn.error - INFO - Shutting down
+05-Aug-22 13:09:44 - uvicorn.error - INFO - Waiting for application shutdown.
+05-Aug-22 13:09:44 - uvicorn - INFO - Shutting down...
+05-Aug-22 13:09:44 - uvicorn.error - INFO - Application shutdown complete.
+05-Aug-22 13:09:44 - uvicorn.error - INFO - Finished server process [12]
+05-Aug-22 13:09:46 - uvicorn.error - WARNING - StatReload detected changes in 'users/models/userModel.py'. Reloading...
+05-Aug-22 13:09:47 - uvicorn.error - INFO - Started server process [16]
+05-Aug-22 13:09:48 - uvicorn.error - INFO - Waiting for application startup.
+05-Aug-22 13:09:48 - uvicorn - INFO - Starting up...
+05-Aug-22 13:09:48 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+05-Aug-22 13:09:48 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:09:48 - sqlalchemy.engine.Engine - INFO - select current_schema()
+05-Aug-22 13:09:48 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:09:48 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+05-Aug-22 13:09:48 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:09:48 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+05-Aug-22 13:09:48 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+05-Aug-22 13:09:48 - sqlalchemy.engine.Engine - INFO - [generated in 0.00053s] ('user',)
+05-Aug-22 13:09:48 - sqlalchemy.engine.Engine - INFO - COMMIT
+05-Aug-22 13:09:48 - uvicorn.error - INFO - Application startup complete.
+05-Aug-22 13:10:31 - uvicorn.error - WARNING - StatReload detected changes in 'users/models/userModel.py'. Reloading...
+05-Aug-22 13:10:31 - uvicorn.error - INFO - Shutting down
+05-Aug-22 13:10:31 - uvicorn.error - INFO - Waiting for application shutdown.
+05-Aug-22 13:10:31 - uvicorn - INFO - Shutting down...
+05-Aug-22 13:10:31 - uvicorn.error - INFO - Application shutdown complete.
+05-Aug-22 13:10:31 - uvicorn.error - INFO - Finished server process [16]
+05-Aug-22 13:10:33 - uvicorn.error - INFO - Started server process [19]
+05-Aug-22 13:10:33 - uvicorn.error - INFO - Waiting for application startup.
+05-Aug-22 13:10:33 - uvicorn - INFO - Starting up...
+05-Aug-22 13:10:33 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+05-Aug-22 13:10:33 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:10:33 - sqlalchemy.engine.Engine - INFO - select current_schema()
+05-Aug-22 13:10:33 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:10:33 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+05-Aug-22 13:10:33 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:10:33 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+05-Aug-22 13:10:33 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+05-Aug-22 13:10:33 - sqlalchemy.engine.Engine - INFO - [generated in 0.00236s] ('user',)
+05-Aug-22 13:10:33 - sqlalchemy.engine.Engine - INFO - COMMIT
+05-Aug-22 13:10:33 - uvicorn.error - INFO - Application startup complete.
+05-Aug-22 13:10:34 - uvicorn.error - WARNING - StatReload detected changes in 'users/models/userModel.py'. Reloading...
+05-Aug-22 13:10:34 - uvicorn.error - INFO - Shutting down
+05-Aug-22 13:10:34 - uvicorn.error - INFO - Waiting for application shutdown.
+05-Aug-22 13:10:34 - uvicorn - INFO - Shutting down...
+05-Aug-22 13:10:34 - uvicorn.error - INFO - Application shutdown complete.
+05-Aug-22 13:10:34 - uvicorn.error - INFO - Finished server process [19]
+05-Aug-22 13:10:35 - uvicorn.error - WARNING - StatReload detected changes in 'users/models/userModel.py'. Reloading...
+05-Aug-22 13:10:37 - uvicorn.error - WARNING - StatReload detected changes in 'users/models/userModel.py'. Reloading...
+05-Aug-22 13:10:38 - uvicorn.error - INFO - Started server process [24]
+05-Aug-22 13:10:38 - uvicorn.error - INFO - Waiting for application startup.
+05-Aug-22 13:10:38 - uvicorn - INFO - Starting up...
+05-Aug-22 13:10:38 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+05-Aug-22 13:10:38 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:10:38 - sqlalchemy.engine.Engine - INFO - select current_schema()
+05-Aug-22 13:10:38 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:10:38 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+05-Aug-22 13:10:38 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:10:38 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+05-Aug-22 13:10:38 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+05-Aug-22 13:10:38 - sqlalchemy.engine.Engine - INFO - [generated in 0.00047s] ('user',)
+05-Aug-22 13:10:38 - sqlalchemy.engine.Engine - INFO - COMMIT
+05-Aug-22 13:10:38 - uvicorn.error - INFO - Application startup complete.
+05-Aug-22 13:10:48 - uvicorn.error - WARNING - StatReload detected changes in 'users/models/userModel.py'. Reloading...
+05-Aug-22 13:10:48 - uvicorn.error - INFO - Shutting down
+05-Aug-22 13:10:48 - uvicorn.error - INFO - Waiting for application shutdown.
+05-Aug-22 13:10:48 - uvicorn - INFO - Shutting down...
+05-Aug-22 13:10:48 - uvicorn.error - INFO - Application shutdown complete.
+05-Aug-22 13:10:48 - uvicorn.error - INFO - Finished server process [24]
+05-Aug-22 13:10:50 - uvicorn.error - INFO - Started server process [27]
+05-Aug-22 13:10:50 - uvicorn.error - INFO - Waiting for application startup.
+05-Aug-22 13:10:50 - uvicorn - INFO - Starting up...
+05-Aug-22 13:10:50 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+05-Aug-22 13:10:50 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:10:50 - sqlalchemy.engine.Engine - INFO - select current_schema()
+05-Aug-22 13:10:50 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:10:50 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+05-Aug-22 13:10:50 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:10:50 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+05-Aug-22 13:10:50 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+05-Aug-22 13:10:50 - sqlalchemy.engine.Engine - INFO - [generated in 0.00053s] ('user',)
+05-Aug-22 13:10:50 - sqlalchemy.engine.Engine - INFO - COMMIT
+05-Aug-22 13:10:50 - uvicorn.error - INFO - Application startup complete.
+05-Aug-22 13:17:11 - uvicorn.error - WARNING - StatReload detected changes in 'users/models/userModel.py'. Reloading...
+05-Aug-22 13:17:11 - uvicorn.error - INFO - Shutting down
+05-Aug-22 13:17:11 - uvicorn.error - INFO - Waiting for application shutdown.
+05-Aug-22 13:17:11 - uvicorn - INFO - Shutting down...
+05-Aug-22 13:17:11 - uvicorn.error - INFO - Application shutdown complete.
+05-Aug-22 13:17:11 - uvicorn.error - INFO - Finished server process [27]
+05-Aug-22 13:17:12 - uvicorn.error - INFO - Started server process [30]
+05-Aug-22 13:17:12 - uvicorn.error - INFO - Waiting for application startup.
+05-Aug-22 13:17:12 - uvicorn - INFO - Starting up...
+05-Aug-22 13:17:12 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+05-Aug-22 13:17:12 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:17:12 - sqlalchemy.engine.Engine - INFO - select current_schema()
+05-Aug-22 13:17:12 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:17:12 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+05-Aug-22 13:17:12 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:17:12 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+05-Aug-22 13:17:12 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+05-Aug-22 13:17:12 - sqlalchemy.engine.Engine - INFO - [generated in 0.00038s] ('user',)
+05-Aug-22 13:17:12 - sqlalchemy.engine.Engine - INFO - COMMIT
+05-Aug-22 13:17:12 - uvicorn.error - INFO - Application startup complete.
+05-Aug-22 13:33:00 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+05-Aug-22 13:33:00 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+05-Aug-22 13:33:00 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+05-Aug-22 13:33:02 - uvicorn.error - INFO - Started server process [9]
+05-Aug-22 13:33:02 - uvicorn.error - INFO - Waiting for application startup.
+05-Aug-22 13:33:02 - uvicorn - INFO - Starting up...
+05-Aug-22 13:33:02 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+05-Aug-22 13:33:02 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:33:02 - sqlalchemy.engine.Engine - INFO - select current_schema()
+05-Aug-22 13:33:02 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:33:02 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+05-Aug-22 13:33:02 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+05-Aug-22 13:33:02 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+05-Aug-22 13:33:02 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+05-Aug-22 13:33:02 - sqlalchemy.engine.Engine - INFO - [generated in 0.00045s] ('user',)
+05-Aug-22 13:33:02 - sqlalchemy.engine.Engine - INFO - COMMIT
+05-Aug-22 13:33:02 - uvicorn.error - INFO - Application startup complete.
+05-Aug-22 13:33:19 - uvicorn - INFO - routers: entry
+05-Aug-22 13:33:19 - uvicorn - INFO - endpoint: entry
+05-Aug-22 13:33:19 - uvicorn - INFO - crud: entry
+05-Aug-22 13:33:19 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+05-Aug-22 13:33:19 - sqlalchemy.engine.Engine - INFO - SELECT "user".email, "user".birth_date, "user".hased_password, "user".first_name, "user".last_name, "user".gender, "user".phone, "user".photo, "user".created_at, "user".updated_at, "user".is_active 
+FROM "user"
+05-Aug-22 13:33:19 - sqlalchemy.engine.Engine - INFO - [generated in 0.00046s] ()
+05-Aug-22 13:33:19 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+05-Aug-22 13:33:19 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 418, in _prepare_and_execute
+    prepared_stmt, attributes = await adapt_connection._prepare(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 660, in _prepare
+    prepared_stmt = await self._connection.prepare(operation)
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 566, in prepare
+    return await self._prepare(
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 584, in _prepare
+    stmt = await self._get_statement(
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 398, in _get_statement
+    statement = await self._protocol.prepare(
+  File "asyncpg/protocol/protocol.pyx", line 168, in prepare
+asyncpg.exceptions.UndefinedColumnError: column user.hased_password does not exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 479, in execute
+    self._adapt_connection.await_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 454, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 389, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 682, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.ProgrammingError: <class 'asyncpg.exceptions.UndefinedColumnError'>: column user.hased_password does not exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.9/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.9/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.9/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/usr/local/lib/python3.9/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.9/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/usr/local/lib/python3.9/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.9/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.9/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/app/users/routers/usersRouters.py", line 31, in show_users
+    data = await show_users_endpoint(session)
+  File "/app/users/endpoints/usersEndpoints.py", line 74, in show_users_endpoint
+    users = await userCrud.get_all(session)
+  File "/app/users/crud/userCrud.py", line 41, in get_all
+    result = await session.execute(select(User))
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/session.py", line 212, in execute
+    result = await greenlet_spawn(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 332, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 479, in execute
+    self._adapt_connection.await_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 454, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 389, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 682, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column user.hased_password does not exist
+[SQL: SELECT "user".email, "user".birth_date, "user".hased_password, "user".first_name, "user".last_name, "user".gender, "user".phone, "user".photo, "user".created_at, "user".updated_at, "user".is_active 
+FROM "user"]
+(Background on this error at: https://sqlalche.me/e/14/f405)
