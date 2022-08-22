@@ -1,5 +1,5 @@
 """
-HTTP Routes 
+HTTP Routers 
 Web -> routers -> endpoints 
 """
 from typing import List
@@ -21,6 +21,7 @@ router = APIRouter(
     tags=["Users"]
 )
 
+
 @router.get("/", 
             status_code=status.HTTP_200_OK, 
             response_model=List[UserOut], 
@@ -35,6 +36,7 @@ async def show_users(*, session : AsyncSession = Depends(get_session)):
     
     data = await show_users_endpoint(session)
     return data
+
     
 @router.post("/", 
              response_model=UserOut
@@ -42,6 +44,9 @@ async def show_users(*, session : AsyncSession = Depends(get_session)):
 async def create_user(*, 
                       user_in: UserIn, 
                       session : AsyncSession = Depends(get_session)): 
+    """
+    Create a user 
+    """
     #todo: add background task to send email 
     
     #* Entrypoint to endpoint manage 

@@ -20,6 +20,8 @@ services:
       context: ./src
       dockerfile: dockerfile
     image: backend_prueba
+    networks:
+      - deployml_network
     volumes:
       - ./src/app:/app
     environment:
@@ -30,14 +32,51 @@ services:
       - POSTGRES_SERVER=db
       - POSTGRES_PORT=5432
       - HOST_UVICORN=0.0.0.0
+      - FIRST_SUPERUSER=super_user@example.com
+      - FIRST_SUPERUSER_PASSWORD=secretpassword
+      - RABBITMQ_HOST=rabbitmq
+      - DB_HOST=dbserver
+      - QUEUE_NAME=ml_queue
     depends_on:
       - db
-  
+      - rabbitmq
+    
+  rabbitmq:
+    image: "bitnami/rabbitmq:3.7"
+    networks:
+    - deployml_network
+    ports:
+      - "4369:4369"
+      - "5672:5672"
+      - "25672:25672"
+      - "15672:15672"
+    volumes:
+      - "rabbitmq_data:/bitnami"
+
+  celery-flower:
+    image: gregsi/latest-celery-flower-docker:latest
+    environment:
+      - AMQP_USERNAME=user
+      - AMQP_PASSWORD=bitnami
+      - AMQP_ADMIN_USERNAME=user
+      - AMQP_ADMIN_PASSWORD=bitnami
+      - AMQP_HOST=rabbitmq
+      - AMQP_PORT=5672
+      - AMQP_ADMIN_HOST=rabbitmq
+      - AMQP_ADMIN_PORT=15672
+      - FLOWER_BASIC_AUTH=user:test
+    ports:
+      - "5555:5555"
+    depends_on:
+      - rabbitmq
 volumes:
   psqldata-async:
     driver: local
+  rabbitmq_data:
+    driver: local
 
-
+networks:
+    deployml_network:
 
 
     

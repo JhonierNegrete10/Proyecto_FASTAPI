@@ -11,3 +11,5 @@
 # export HOST_UVICORN=0.0.0.0
 
 python main.py 
+
+# celery -A celery_worker.celery worker --loglevel=info

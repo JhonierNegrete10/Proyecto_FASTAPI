@@ -16,3 +16,5 @@ coverage
 jinja2
 email-validator
 alembic
+celery
+flower
