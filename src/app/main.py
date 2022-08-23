@@ -3,6 +3,8 @@ import logging
 from db.init_database import init_database
 
 from db.databaseConfig import init_db
+from comunication.rabbit_init  import publish
+# from celerys.celeryWorker import create_order
 
 import users 
 from users import usersRouters 
@@ -34,6 +36,13 @@ async def startup_event():
     await init_db()
     # await init_database()
     log.info("INIT: ___end___")
+    
+# Create order endpoint
+@app.post('/order')
+def add_order():
+#     # use delay() method to call the celery task
+    publish()
+    return {"message": "Order Received! Thank you for your patience."}
 
 
 @app.on_event("shutdown")

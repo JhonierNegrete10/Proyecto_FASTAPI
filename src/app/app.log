@@ -7070,3 +7070,1999 @@ FROM "user"
 05-Aug-22 17:04:58 - sqlalchemy.engine.Engine - INFO - COMMIT
 05-Aug-22 17:04:58 - uvicorn - INFO - INIT: ___end___
 05-Aug-22 17:04:58 - uvicorn.error - INFO - Application startup complete.
+22-Aug-22 17:56:44 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+22-Aug-22 17:56:44 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+22-Aug-22 17:56:44 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+22-Aug-22 17:56:45 - uvicorn.error - INFO - Started server process [9]
+22-Aug-22 17:56:45 - uvicorn.error - INFO - Waiting for application startup.
+22-Aug-22 17:56:45 - uvicorn - INFO - INIT: ___Starting up___
+22-Aug-22 17:56:49 - uvicorn.error - ERROR - Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 635, in lifespan
+    async with self.lifespan_context(app):
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 530, in __aenter__
+    await self._router.startup()
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 612, in startup
+    await handler()
+  File "/app/main.py", line 34, in startup_event
+    await init_db()
+  File "/app/db/databaseConfig.py", line 30, in init_db
+    async with engine.begin() as conn:
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/base.py", line 60, in __aenter__
+    return await self.start(is_ctxmanager=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/engine.py", line 598, in start
+    await self.conn.start(is_ctxmanager=is_ctxmanager)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/engine.py", line 157, in start
+    await (greenlet_spawn(self.sync_engine.connect))
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/future/engine.py", line 406, in connect
+    return super(Engine, self).connect()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 777, in connect
+    await_only(self.asyncpg.connect(*arg, **kw)),
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 2093, in connect
+    return await connect_utils._connect(
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 903, in _connect
+    raise last_error
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 889, in _connect
+    return await _connect_addr(
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 781, in _connect_addr
+    return await __connect_addr(params, timeout, True, *args)
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 833, in __connect_addr
+    tr, pr = await compat.wait_for(connector, timeout=timeout)
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/compat.py", line 66, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/local/lib/python3.9/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 692, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1026, in create_connection
+    infos = await self._ensure_resolved(
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1405, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 861, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+22-Aug-22 17:56:49 - uvicorn.error - ERROR - Application startup failed. Exiting.
+22-Aug-22 21:37:32 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+22-Aug-22 21:37:34 - uvicorn.error - INFO - Started server process [12]
+22-Aug-22 21:37:34 - uvicorn.error - INFO - Waiting for application startup.
+22-Aug-22 21:37:34 - uvicorn - INFO - INIT: ___Starting up___
+22-Aug-22 21:37:44 - uvicorn.error - ERROR - Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 635, in lifespan
+    async with self.lifespan_context(app):
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 530, in __aenter__
+    await self._router.startup()
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 612, in startup
+    await handler()
+  File "/app/main.py", line 35, in startup_event
+    await init_db()
+  File "/app/db/databaseConfig.py", line 30, in init_db
+    async with engine.begin() as conn:
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/base.py", line 60, in __aenter__
+    return await self.start(is_ctxmanager=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/engine.py", line 598, in start
+    await self.conn.start(is_ctxmanager=is_ctxmanager)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/engine.py", line 157, in start
+    await (greenlet_spawn(self.sync_engine.connect))
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/future/engine.py", line 406, in connect
+    return super(Engine, self).connect()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 777, in connect
+    await_only(self.asyncpg.connect(*arg, **kw)),
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 2093, in connect
+    return await connect_utils._connect(
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 903, in _connect
+    raise last_error
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 889, in _connect
+    return await _connect_addr(
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 781, in _connect_addr
+    return await __connect_addr(params, timeout, True, *args)
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 833, in __connect_addr
+    tr, pr = await compat.wait_for(connector, timeout=timeout)
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/compat.py", line 66, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/local/lib/python3.9/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 692, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1026, in create_connection
+    infos = await self._ensure_resolved(
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1405, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 861, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+22-Aug-22 21:37:44 - uvicorn.error - ERROR - Application startup failed. Exiting.
+22-Aug-22 21:38:42 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+22-Aug-22 21:38:45 - uvicorn.error - INFO - Started server process [15]
+22-Aug-22 21:38:45 - uvicorn.error - INFO - Waiting for application startup.
+22-Aug-22 21:38:45 - uvicorn - INFO - INIT: ___Starting up___
+22-Aug-22 21:38:55 - uvicorn.error - ERROR - Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 635, in lifespan
+    async with self.lifespan_context(app):
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 530, in __aenter__
+    await self._router.startup()
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 612, in startup
+    await handler()
+  File "/app/main.py", line 35, in startup_event
+    await init_db()
+  File "/app/db/databaseConfig.py", line 30, in init_db
+    async with engine.begin() as conn:
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/base.py", line 60, in __aenter__
+    return await self.start(is_ctxmanager=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/engine.py", line 598, in start
+    await self.conn.start(is_ctxmanager=is_ctxmanager)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/engine.py", line 157, in start
+    await (greenlet_spawn(self.sync_engine.connect))
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/future/engine.py", line 406, in connect
+    return super(Engine, self).connect()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 777, in connect
+    await_only(self.asyncpg.connect(*arg, **kw)),
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 2093, in connect
+    return await connect_utils._connect(
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 903, in _connect
+    raise last_error
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 889, in _connect
+    return await _connect_addr(
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 781, in _connect_addr
+    return await __connect_addr(params, timeout, True, *args)
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 833, in __connect_addr
+    tr, pr = await compat.wait_for(connector, timeout=timeout)
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/compat.py", line 66, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/local/lib/python3.9/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 692, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1026, in create_connection
+    infos = await self._ensure_resolved(
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1405, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 861, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+22-Aug-22 21:38:55 - uvicorn.error - ERROR - Application startup failed. Exiting.
+22-Aug-22 21:43:46 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+22-Aug-22 21:43:46 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+22-Aug-22 21:43:46 - uvicorn.error - INFO - Started reloader process [6] using StatReload
+22-Aug-22 21:43:49 - uvicorn.error - INFO - Started server process [8]
+22-Aug-22 21:43:49 - uvicorn.error - INFO - Waiting for application startup.
+22-Aug-22 21:43:49 - uvicorn - INFO - INIT: ___Starting up___
+22-Aug-22 21:43:53 - uvicorn.error - ERROR - Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 635, in lifespan
+    async with self.lifespan_context(app):
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 530, in __aenter__
+    await self._router.startup()
+  File "/usr/local/lib/python3.9/site-packages/starlette/routing.py", line 612, in startup
+    await handler()
+  File "/app/main.py", line 35, in startup_event
+    await init_db()
+  File "/app/db/databaseConfig.py", line 30, in init_db
+    async with engine.begin() as conn:
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/base.py", line 60, in __aenter__
+    return await self.start(is_ctxmanager=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/engine.py", line 598, in start
+    await self.conn.start(is_ctxmanager=is_ctxmanager)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/ext/asyncio/engine.py", line 157, in start
+    await (greenlet_spawn(self.sync_engine.connect))
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/future/engine.py", line 406, in connect
+    return super(Engine, self).connect()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 777, in connect
+    await_only(self.asyncpg.connect(*arg, **kw)),
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 2093, in connect
+    return await connect_utils._connect(
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 903, in _connect
+    raise last_error
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 889, in _connect
+    return await _connect_addr(
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 781, in _connect_addr
+    return await __connect_addr(params, timeout, True, *args)
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 833, in __connect_addr
+    tr, pr = await compat.wait_for(connector, timeout=timeout)
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/compat.py", line 66, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/local/lib/python3.9/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 692, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1026, in create_connection
+    infos = await self._ensure_resolved(
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1405, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 861, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+22-Aug-22 21:43:53 - uvicorn.error - ERROR - Application startup failed. Exiting.
+22-Aug-22 21:49:01 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+22-Aug-22 21:49:03 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+22-Aug-22 21:49:06 - uvicorn.error - INFO - Started server process [12]
+22-Aug-22 21:49:06 - uvicorn.error - INFO - Waiting for application startup.
+22-Aug-22 21:49:06 - uvicorn - INFO - INIT: ___Starting up___
+22-Aug-22 21:49:13 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+22-Aug-22 21:49:13 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:83 (Press CTRL+C to quit)
+22-Aug-22 21:49:13 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+22-Aug-22 21:49:14 - uvicorn.error - INFO - Started server process [10]
+22-Aug-22 21:49:14 - uvicorn.error - INFO - Waiting for application startup.
+22-Aug-22 21:49:14 - uvicorn - INFO - INIT: ___Starting up___
+22-Aug-22 21:49:24 - uvicorn.error - ERROR - Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 635, in lifespan
+    async with self.lifespan_context(app):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 530, in __aenter__
+    await self._router.startup()
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 612, in startup
+    await handler()
+  File "/app/main.py", line 35, in startup_event
+    await init_db()
+  File "/app/db/databaseConfig.py", line 30, in init_db
+    async with engine.begin() as conn:
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/base.py", line 60, in __aenter__
+    return await self.start(is_ctxmanager=True)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 598, in start
+    await self.conn.start(is_ctxmanager=is_ctxmanager)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 157, in start
+    await (greenlet_spawn(self.sync_engine.connect))
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 406, in connect
+    return super(Engine, self).connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 777, in connect
+    await_only(self.asyncpg.connect(*arg, **kw)),
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connection.py", line 2093, in connect
+    return await connect_utils._connect(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 903, in _connect
+    raise last_error
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 889, in _connect
+    return await _connect_addr(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 781, in _connect_addr
+    return await __connect_addr(params, timeout, True, *args)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 833, in __connect_addr
+    tr, pr = await compat.wait_for(connector, timeout=timeout)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/compat.py", line 66, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 494, in wait_for
+    return fut.result()
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 692, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 986, in create_connection
+    infos = await self._ensure_resolved(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 1365, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+22-Aug-22 21:49:24 - uvicorn.error - ERROR - Application startup failed. Exiting.
+22-Aug-22 21:49:58 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+22-Aug-22 21:49:58 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:83 (Press CTRL+C to quit)
+22-Aug-22 21:49:58 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+22-Aug-22 21:50:00 - uvicorn.error - INFO - Started server process [10]
+22-Aug-22 21:50:00 - uvicorn.error - INFO - Waiting for application startup.
+22-Aug-22 21:50:00 - uvicorn - INFO - INIT: ___Starting up___
+22-Aug-22 21:50:10 - uvicorn.error - ERROR - Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 635, in lifespan
+    async with self.lifespan_context(app):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 530, in __aenter__
+    await self._router.startup()
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 612, in startup
+    await handler()
+  File "/app/main.py", line 35, in startup_event
+    await init_db()
+  File "/app/db/databaseConfig.py", line 30, in init_db
+    async with engine.begin() as conn:
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/base.py", line 60, in __aenter__
+    return await self.start(is_ctxmanager=True)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 598, in start
+    await self.conn.start(is_ctxmanager=is_ctxmanager)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 157, in start
+    await (greenlet_spawn(self.sync_engine.connect))
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 406, in connect
+    return super(Engine, self).connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 777, in connect
+    await_only(self.asyncpg.connect(*arg, **kw)),
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connection.py", line 2093, in connect
+    return await connect_utils._connect(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 903, in _connect
+    raise last_error
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 889, in _connect
+    return await _connect_addr(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 781, in _connect_addr
+    return await __connect_addr(params, timeout, True, *args)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 833, in __connect_addr
+    tr, pr = await compat.wait_for(connector, timeout=timeout)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/compat.py", line 66, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 494, in wait_for
+    return fut.result()
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 692, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 986, in create_connection
+    infos = await self._ensure_resolved(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 1365, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+22-Aug-22 21:50:10 - uvicorn.error - ERROR - Application startup failed. Exiting.
+22-Aug-22 21:51:33 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+22-Aug-22 21:51:35 - uvicorn.error - INFO - Started server process [13]
+22-Aug-22 21:51:35 - uvicorn.error - INFO - Waiting for application startup.
+22-Aug-22 21:51:35 - uvicorn - INFO - INIT: ___Starting up___
+22-Aug-22 21:51:45 - uvicorn.error - ERROR - Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 635, in lifespan
+    async with self.lifespan_context(app):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 530, in __aenter__
+    await self._router.startup()
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 612, in startup
+    await handler()
+  File "/app/main.py", line 35, in startup_event
+    await init_db()
+  File "/app/db/databaseConfig.py", line 30, in init_db
+    async with engine.begin() as conn:
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/base.py", line 60, in __aenter__
+    return await self.start(is_ctxmanager=True)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 598, in start
+    await self.conn.start(is_ctxmanager=is_ctxmanager)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 157, in start
+    await (greenlet_spawn(self.sync_engine.connect))
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 406, in connect
+    return super(Engine, self).connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 777, in connect
+    await_only(self.asyncpg.connect(*arg, **kw)),
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connection.py", line 2093, in connect
+    return await connect_utils._connect(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 903, in _connect
+    raise last_error
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 889, in _connect
+    return await _connect_addr(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 781, in _connect_addr
+    return await __connect_addr(params, timeout, True, *args)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 833, in __connect_addr
+    tr, pr = await compat.wait_for(connector, timeout=timeout)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/compat.py", line 66, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 494, in wait_for
+    return fut.result()
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 692, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 986, in create_connection
+    infos = await self._ensure_resolved(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 1365, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+22-Aug-22 21:51:45 - uvicorn.error - ERROR - Application startup failed. Exiting.
+22-Aug-22 21:51:57 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+22-Aug-22 21:51:59 - uvicorn.error - INFO - Started server process [16]
+22-Aug-22 21:51:59 - uvicorn.error - INFO - Waiting for application startup.
+22-Aug-22 21:51:59 - uvicorn - INFO - INIT: ___Starting up___
+22-Aug-22 21:52:09 - uvicorn.error - ERROR - Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 635, in lifespan
+    async with self.lifespan_context(app):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 530, in __aenter__
+    await self._router.startup()
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 612, in startup
+    await handler()
+  File "/app/main.py", line 35, in startup_event
+    await init_db()
+  File "/app/db/databaseConfig.py", line 30, in init_db
+    async with engine.begin() as conn:
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/base.py", line 60, in __aenter__
+    return await self.start(is_ctxmanager=True)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 598, in start
+    await self.conn.start(is_ctxmanager=is_ctxmanager)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 157, in start
+    await (greenlet_spawn(self.sync_engine.connect))
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 406, in connect
+    return super(Engine, self).connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 777, in connect
+    await_only(self.asyncpg.connect(*arg, **kw)),
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connection.py", line 2093, in connect
+    return await connect_utils._connect(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 903, in _connect
+    raise last_error
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 889, in _connect
+    return await _connect_addr(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 781, in _connect_addr
+    return await __connect_addr(params, timeout, True, *args)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 833, in __connect_addr
+    tr, pr = await compat.wait_for(connector, timeout=timeout)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/compat.py", line 66, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 494, in wait_for
+    return fut.result()
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 692, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 986, in create_connection
+    infos = await self._ensure_resolved(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 1365, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+22-Aug-22 21:52:09 - uvicorn.error - ERROR - Application startup failed. Exiting.
+22-Aug-22 21:52:10 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+22-Aug-22 21:52:12 - uvicorn.error - INFO - Started server process [19]
+22-Aug-22 21:52:12 - uvicorn.error - INFO - Waiting for application startup.
+22-Aug-22 21:52:12 - uvicorn - INFO - INIT: ___Starting up___
+22-Aug-22 21:52:22 - uvicorn.error - ERROR - Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 635, in lifespan
+    async with self.lifespan_context(app):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 530, in __aenter__
+    await self._router.startup()
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 612, in startup
+    await handler()
+  File "/app/main.py", line 35, in startup_event
+    await init_db()
+  File "/app/db/databaseConfig.py", line 30, in init_db
+    async with engine.begin() as conn:
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/base.py", line 60, in __aenter__
+    return await self.start(is_ctxmanager=True)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 598, in start
+    await self.conn.start(is_ctxmanager=is_ctxmanager)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 157, in start
+    await (greenlet_spawn(self.sync_engine.connect))
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 406, in connect
+    return super(Engine, self).connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 777, in connect
+    await_only(self.asyncpg.connect(*arg, **kw)),
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connection.py", line 2093, in connect
+    return await connect_utils._connect(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 903, in _connect
+    raise last_error
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 889, in _connect
+    return await _connect_addr(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 781, in _connect_addr
+    return await __connect_addr(params, timeout, True, *args)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 833, in __connect_addr
+    tr, pr = await compat.wait_for(connector, timeout=timeout)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/compat.py", line 66, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 494, in wait_for
+    return fut.result()
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 692, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 986, in create_connection
+    infos = await self._ensure_resolved(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 1365, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+22-Aug-22 21:52:22 - uvicorn.error - ERROR - Application startup failed. Exiting.
+22-Aug-22 21:52:33 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+22-Aug-22 21:52:33 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+22-Aug-22 21:52:33 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+22-Aug-22 21:52:34 - uvicorn.error - INFO - Started server process [10]
+22-Aug-22 21:52:34 - uvicorn.error - INFO - Waiting for application startup.
+22-Aug-22 21:52:34 - uvicorn - INFO - INIT: ___Starting up___
+22-Aug-22 21:52:34 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+22-Aug-22 21:52:34 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+22-Aug-22 21:52:34 - sqlalchemy.engine.Engine - INFO - select current_schema()
+22-Aug-22 21:52:34 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+22-Aug-22 21:52:34 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+22-Aug-22 21:52:34 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+22-Aug-22 21:52:34 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+22-Aug-22 21:52:34 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+22-Aug-22 21:52:34 - sqlalchemy.engine.Engine - INFO - [generated in 0.00128s] ('user',)
+22-Aug-22 21:52:34 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE "user" (
+	email VARCHAR NOT NULL, 
+	birth_date DATE, 
+	hashed_password VARCHAR(64), 
+	first_name VARCHAR(50), 
+	last_name VARCHAR(50), 
+	gender VARCHAR, 
+	phone VARCHAR, 
+	photo VARCHAR, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	is_super_user BOOLEAN, 
+	is_active BOOLEAN, 
+	verify_code VARCHAR, 
+	PRIMARY KEY (email)
+)
+
+
+22-Aug-22 21:52:34 - sqlalchemy.engine.Engine - INFO - [no key 0.00120s] ()
+22-Aug-22 21:52:34 - sqlalchemy.engine.Engine - INFO - COMMIT
+22-Aug-22 21:52:34 - uvicorn - INFO - INIT: ___end___
+22-Aug-22 21:52:34 - uvicorn.error - INFO - Application startup complete.
+22-Aug-22 21:59:23 - uvicorn.error - WARNING - StatReload detected changes in 'celerys/celeryWorker.py'. Reloading...
+22-Aug-22 21:59:23 - uvicorn.error - INFO - Shutting down
+22-Aug-22 21:59:23 - uvicorn.error - INFO - Waiting for application shutdown.
+22-Aug-22 21:59:23 - uvicorn - INFO - Shutting down...
+22-Aug-22 21:59:23 - uvicorn.error - INFO - Application shutdown complete.
+22-Aug-22 21:59:23 - uvicorn.error - INFO - Finished server process [10]
+22-Aug-22 21:59:24 - uvicorn.error - INFO - Started server process [13]
+22-Aug-22 21:59:24 - uvicorn.error - INFO - Waiting for application startup.
+22-Aug-22 21:59:24 - uvicorn - INFO - INIT: ___Starting up___
+22-Aug-22 21:59:24 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+22-Aug-22 21:59:24 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+22-Aug-22 21:59:24 - sqlalchemy.engine.Engine - INFO - select current_schema()
+22-Aug-22 21:59:24 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+22-Aug-22 21:59:24 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+22-Aug-22 21:59:24 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+22-Aug-22 21:59:24 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+22-Aug-22 21:59:24 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+22-Aug-22 21:59:24 - sqlalchemy.engine.Engine - INFO - [generated in 0.00036s] ('user',)
+22-Aug-22 21:59:24 - sqlalchemy.engine.Engine - INFO - COMMIT
+22-Aug-22 21:59:24 - uvicorn - INFO - INIT: ___end___
+22-Aug-22 21:59:24 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 13:01:49 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+23-Aug-22 13:01:49 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+23-Aug-22 13:01:49 - uvicorn.error - INFO - Started reloader process [8] using StatReload
+23-Aug-22 13:01:50 - uvicorn.error - INFO - Started server process [11]
+23-Aug-22 13:01:50 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 13:01:50 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 13:01:50 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 13:01:50 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:01:50 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 13:01:50 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:01:50 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 13:01:50 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:01:50 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 13:01:50 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 13:01:50 - sqlalchemy.engine.Engine - INFO - [generated in 0.00087s] ('user',)
+23-Aug-22 13:01:50 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 13:01:50 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 13:01:50 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 13:18:15 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+23-Aug-22 13:18:15 - uvicorn.error - INFO - Shutting down
+23-Aug-22 13:18:15 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 13:18:15 - uvicorn - INFO - Shutting down...
+23-Aug-22 13:18:15 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 13:18:15 - uvicorn.error - INFO - Finished server process [11]
+23-Aug-22 13:18:32 - uvicorn.error - WARNING - StatReload detected changes in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 13:18:36 - uvicorn.error - WARNING - StatReload detected changes in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 13:18:37 - uvicorn.error - INFO - Started server process [18]
+23-Aug-22 13:18:37 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 13:18:37 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 13:18:37 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 13:18:37 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:18:37 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 13:18:37 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:18:37 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 13:18:37 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:18:37 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 13:18:37 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 13:18:37 - sqlalchemy.engine.Engine - INFO - [generated in 0.00062s] ('user',)
+23-Aug-22 13:18:37 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 13:18:37 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 13:18:37 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 13:19:16 - uvicorn.error - WARNING - StatReload detected changes in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 13:19:16 - uvicorn.error - INFO - Shutting down
+23-Aug-22 13:19:17 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 13:19:17 - uvicorn - INFO - Shutting down...
+23-Aug-22 13:19:17 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 13:19:17 - uvicorn.error - INFO - Finished server process [18]
+23-Aug-22 13:19:19 - uvicorn.error - INFO - Started server process [21]
+23-Aug-22 13:19:19 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 13:19:19 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 13:19:19 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 13:19:19 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:19:19 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 13:19:19 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:19:19 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 13:19:19 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:19:19 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 13:19:19 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 13:19:19 - sqlalchemy.engine.Engine - INFO - [generated in 0.00197s] ('user',)
+23-Aug-22 13:19:19 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 13:19:19 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 13:19:19 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 13:19:27 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+23-Aug-22 13:19:27 - uvicorn.error - INFO - Shutting down
+23-Aug-22 13:19:27 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 13:19:27 - uvicorn - INFO - Shutting down...
+23-Aug-22 13:19:27 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 13:19:27 - uvicorn.error - INFO - Finished server process [21]
+23-Aug-22 13:19:29 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+23-Aug-22 13:19:31 - uvicorn.error - INFO - Started server process [25]
+23-Aug-22 13:19:31 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 13:19:31 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 13:19:31 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 13:19:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:19:31 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 13:19:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:19:31 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 13:19:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:19:31 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 13:19:31 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 13:19:31 - sqlalchemy.engine.Engine - INFO - [generated in 0.00479s] ('user',)
+23-Aug-22 13:19:31 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 13:19:31 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 13:19:31 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 13:19:41 - uvicorn.error - WARNING - StatReload detected changes in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 13:19:41 - uvicorn.error - INFO - Shutting down
+23-Aug-22 13:19:41 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 13:19:41 - uvicorn - INFO - Shutting down...
+23-Aug-22 13:19:41 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 13:19:41 - uvicorn.error - INFO - Finished server process [25]
+23-Aug-22 13:19:44 - uvicorn.error - INFO - Started server process [28]
+23-Aug-22 13:19:44 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 13:19:44 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 13:19:44 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 13:19:44 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:19:44 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 13:19:44 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:19:44 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 13:19:44 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:19:44 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 13:19:44 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 13:19:44 - sqlalchemy.engine.Engine - INFO - [generated in 0.00054s] ('user',)
+23-Aug-22 13:19:44 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 13:19:44 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 13:19:44 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 13:19:46 - uvicorn.error - WARNING - StatReload detected changes in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 13:19:46 - uvicorn.error - INFO - Shutting down
+23-Aug-22 13:19:46 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 13:19:46 - uvicorn - INFO - Shutting down...
+23-Aug-22 13:19:46 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 13:19:46 - uvicorn.error - INFO - Finished server process [28]
+23-Aug-22 13:19:48 - uvicorn.error - INFO - Started server process [31]
+23-Aug-22 13:19:48 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 13:19:48 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 13:19:48 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 13:19:48 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:19:48 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 13:19:48 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:19:48 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 13:19:48 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:19:48 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 13:19:48 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 13:19:48 - sqlalchemy.engine.Engine - INFO - [generated in 0.00118s] ('user',)
+23-Aug-22 13:19:48 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 13:19:48 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 13:19:48 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 13:19:54 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+23-Aug-22 13:19:54 - uvicorn.error - INFO - Shutting down
+23-Aug-22 13:19:54 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 13:19:54 - uvicorn - INFO - Shutting down...
+23-Aug-22 13:19:54 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 13:19:54 - uvicorn.error - INFO - Finished server process [31]
+23-Aug-22 13:19:56 - uvicorn.error - INFO - Started server process [34]
+23-Aug-22 13:19:56 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 13:19:56 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 13:19:56 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 13:19:56 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:19:56 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 13:19:56 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:19:56 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 13:19:56 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:19:56 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 13:19:56 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 13:19:56 - sqlalchemy.engine.Engine - INFO - [generated in 0.00126s] ('user',)
+23-Aug-22 13:19:56 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 13:19:56 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 13:19:56 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 13:21:51 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+23-Aug-22 13:21:51 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+23-Aug-22 13:21:51 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+23-Aug-22 13:21:52 - uvicorn.error - INFO - Started server process [10]
+23-Aug-22 13:21:52 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 13:21:52 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 13:21:56 - uvicorn.error - ERROR - Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 635, in lifespan
+    async with self.lifespan_context(app):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 530, in __aenter__
+    await self._router.startup()
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 612, in startup
+    await handler()
+  File "/app/main.py", line 35, in startup_event
+    await init_db()
+  File "/app/db/databaseConfig.py", line 30, in init_db
+    async with engine.begin() as conn:
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/base.py", line 60, in __aenter__
+    return await self.start(is_ctxmanager=True)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 598, in start
+    await self.conn.start(is_ctxmanager=is_ctxmanager)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 157, in start
+    await (greenlet_spawn(self.sync_engine.connect))
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 406, in connect
+    return super(Engine, self).connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 777, in connect
+    await_only(self.asyncpg.connect(*arg, **kw)),
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connection.py", line 2093, in connect
+    return await connect_utils._connect(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 903, in _connect
+    raise last_error
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 889, in _connect
+    return await _connect_addr(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 781, in _connect_addr
+    return await __connect_addr(params, timeout, True, *args)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 833, in __connect_addr
+    tr, pr = await compat.wait_for(connector, timeout=timeout)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/compat.py", line 66, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 494, in wait_for
+    return fut.result()
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 692, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 986, in create_connection
+    infos = await self._ensure_resolved(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 1365, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+23-Aug-22 13:21:56 - uvicorn.error - ERROR - Application startup failed. Exiting.
+23-Aug-22 13:24:31 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+23-Aug-22 13:24:31 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+23-Aug-22 13:24:31 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+23-Aug-22 13:24:32 - uvicorn.error - INFO - Started server process [10]
+23-Aug-22 13:24:32 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 13:24:32 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 13:24:42 - uvicorn.error - ERROR - Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 635, in lifespan
+    async with self.lifespan_context(app):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 530, in __aenter__
+    await self._router.startup()
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 612, in startup
+    await handler()
+  File "/app/main.py", line 35, in startup_event
+    await init_db()
+  File "/app/db/databaseConfig.py", line 30, in init_db
+    async with engine.begin() as conn:
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/base.py", line 60, in __aenter__
+    return await self.start(is_ctxmanager=True)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 598, in start
+    await self.conn.start(is_ctxmanager=is_ctxmanager)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 157, in start
+    await (greenlet_spawn(self.sync_engine.connect))
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 406, in connect
+    return super(Engine, self).connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 777, in connect
+    await_only(self.asyncpg.connect(*arg, **kw)),
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connection.py", line 2093, in connect
+    return await connect_utils._connect(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 903, in _connect
+    raise last_error
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 889, in _connect
+    return await _connect_addr(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 781, in _connect_addr
+    return await __connect_addr(params, timeout, True, *args)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 833, in __connect_addr
+    tr, pr = await compat.wait_for(connector, timeout=timeout)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/compat.py", line 66, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 494, in wait_for
+    return fut.result()
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 692, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 986, in create_connection
+    infos = await self._ensure_resolved(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 1365, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+23-Aug-22 13:24:42 - uvicorn.error - ERROR - Application startup failed. Exiting.
+23-Aug-22 13:26:31 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+23-Aug-22 13:26:31 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+23-Aug-22 13:26:31 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+23-Aug-22 13:26:32 - uvicorn.error - INFO - Started server process [10]
+23-Aug-22 13:26:32 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 13:26:32 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 13:26:42 - uvicorn.error - ERROR - Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 635, in lifespan
+    async with self.lifespan_context(app):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 530, in __aenter__
+    await self._router.startup()
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 612, in startup
+    await handler()
+  File "/app/main.py", line 35, in startup_event
+    await init_db()
+  File "/app/db/databaseConfig.py", line 30, in init_db
+    async with engine.begin() as conn:
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/base.py", line 60, in __aenter__
+    return await self.start(is_ctxmanager=True)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 598, in start
+    await self.conn.start(is_ctxmanager=is_ctxmanager)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 157, in start
+    await (greenlet_spawn(self.sync_engine.connect))
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 406, in connect
+    return super(Engine, self).connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 777, in connect
+    await_only(self.asyncpg.connect(*arg, **kw)),
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connection.py", line 2093, in connect
+    return await connect_utils._connect(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 903, in _connect
+    raise last_error
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 889, in _connect
+    return await _connect_addr(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 781, in _connect_addr
+    return await __connect_addr(params, timeout, True, *args)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 833, in __connect_addr
+    tr, pr = await compat.wait_for(connector, timeout=timeout)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/compat.py", line 66, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 494, in wait_for
+    return fut.result()
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 692, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 986, in create_connection
+    infos = await self._ensure_resolved(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 1365, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+23-Aug-22 13:26:42 - uvicorn.error - ERROR - Application startup failed. Exiting.
+23-Aug-22 13:30:29 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+23-Aug-22 13:30:29 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+23-Aug-22 13:30:29 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+23-Aug-22 13:30:30 - uvicorn.error - INFO - Started server process [10]
+23-Aug-22 13:30:30 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 13:30:30 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 13:30:40 - uvicorn.error - ERROR - Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 635, in lifespan
+    async with self.lifespan_context(app):
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 530, in __aenter__
+    await self._router.startup()
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 612, in startup
+    await handler()
+  File "/app/main.py", line 35, in startup_event
+    await init_db()
+  File "/app/db/databaseConfig.py", line 30, in init_db
+    async with engine.begin() as conn:
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/base.py", line 60, in __aenter__
+    return await self.start(is_ctxmanager=True)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 598, in start
+    await self.conn.start(is_ctxmanager=is_ctxmanager)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/engine.py", line 157, in start
+    await (greenlet_spawn(self.sync_engine.connect))
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 406, in connect
+    return super(Engine, self).connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 777, in connect
+    await_only(self.asyncpg.connect(*arg, **kw)),
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connection.py", line 2093, in connect
+    return await connect_utils._connect(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 903, in _connect
+    raise last_error
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 889, in _connect
+    return await _connect_addr(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 781, in _connect_addr
+    return await __connect_addr(params, timeout, True, *args)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 833, in __connect_addr
+    tr, pr = await compat.wait_for(connector, timeout=timeout)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/compat.py", line 66, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/local/lib/python3.8/asyncio/tasks.py", line 494, in wait_for
+    return fut.result()
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connect_utils.py", line 692, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 986, in create_connection
+    infos = await self._ensure_resolved(
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 1365, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+23-Aug-22 13:30:40 - uvicorn.error - ERROR - Application startup failed. Exiting.
+23-Aug-22 13:37:52 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+23-Aug-22 13:37:52 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+23-Aug-22 13:37:52 - uvicorn.error - INFO - Started reloader process [7] using statreload
+23-Aug-22 13:37:53 - uvicorn.error - INFO - Started server process [12]
+23-Aug-22 13:37:53 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 13:37:53 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 13:38:03 - uvicorn.error - ERROR - Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/starlette/routing.py", line 635, in lifespan
+    async with self.lifespan_context(app):
+  File "/usr/local/lib/python3.6/site-packages/starlette/routing.py", line 530, in __aenter__
+    await self._router.startup()
+  File "/usr/local/lib/python3.6/site-packages/starlette/routing.py", line 612, in startup
+    await handler()
+  File "/app/main.py", line 35, in startup_event
+    await init_db()
+  File "/app/db/databaseConfig.py", line 30, in init_db
+    async with engine.begin() as conn:
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/ext/asyncio/base.py", line 60, in __aenter__
+    return await self.start(is_ctxmanager=True)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/ext/asyncio/engine.py", line 598, in start
+    await self.conn.start(is_ctxmanager=is_ctxmanager)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/ext/asyncio/engine.py", line 157, in start
+    await (greenlet_spawn(self.sync_engine.connect))
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/future/engine.py", line 406, in connect
+    return super(Engine, self).connect()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 777, in connect
+    await_only(self.asyncpg.connect(*arg, **kw)),
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.6/site-packages/asyncpg/connection.py", line 2111, in connect
+    max_cacheable_statement_size=max_cacheable_statement_size,
+  File "/usr/local/lib/python3.6/site-packages/asyncpg/connect_utils.py", line 903, in _connect
+    raise last_error
+  File "/usr/local/lib/python3.6/site-packages/asyncpg/connect_utils.py", line 896, in _connect
+    record_class=record_class,
+  File "/usr/local/lib/python3.6/site-packages/asyncpg/connect_utils.py", line 781, in _connect_addr
+    return await __connect_addr(params, timeout, True, *args)
+  File "/usr/local/lib/python3.6/site-packages/asyncpg/connect_utils.py", line 833, in __connect_addr
+    tr, pr = await compat.wait_for(connector, timeout=timeout)
+  File "/usr/local/lib/python3.6/site-packages/asyncpg/compat.py", line 66, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/local/lib/python3.6/asyncio/tasks.py", line 358, in wait_for
+    return fut.result()
+  File "/usr/local/lib/python3.6/site-packages/asyncpg/connect_utils.py", line 695, in _create_ssl_connection
+    host, port)
+  File "/usr/local/lib/python3.6/asyncio/base_events.py", line 754, in create_connection
+    infos = f1.result()
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+23-Aug-22 13:38:03 - uvicorn.error - ERROR - Application startup failed. Exiting.
+23-Aug-22 13:38:04 - uvicorn.error - INFO - Stopping reloader process [7]
+23-Aug-22 13:40:07 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+23-Aug-22 13:40:07 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+23-Aug-22 13:40:07 - uvicorn.error - INFO - Started reloader process [8] using statreload
+23-Aug-22 13:40:08 - uvicorn.error - INFO - Started server process [13]
+23-Aug-22 13:40:08 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 13:40:08 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 13:40:08 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 13:40:08 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:40:08 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 13:40:08 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:40:08 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 13:40:08 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 13:40:08 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 13:40:08 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 13:40:08 - sqlalchemy.engine.Engine - INFO - [generated in 0.00044s] ('user',)
+23-Aug-22 13:40:08 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 13:40:08 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 13:40:08 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 13:58:00 - uvicorn.error - WARNING - StatReload detected file change in 'main.py'. Reloading...
+23-Aug-22 13:58:00 - uvicorn.error - INFO - Shutting down
+23-Aug-22 13:58:00 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 13:58:00 - uvicorn - INFO - Shutting down...
+23-Aug-22 13:58:00 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 13:58:00 - uvicorn.error - INFO - Finished server process [13]
+23-Aug-22 13:58:01 - uvicorn.error - INFO - Stopping reloader process [8]
+23-Aug-22 14:29:37 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+23-Aug-22 14:29:37 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+23-Aug-22 14:29:37 - uvicorn.error - INFO - Started reloader process [7] using statreload
+23-Aug-22 14:29:38 - uvicorn.error - INFO - Started server process [12]
+23-Aug-22 14:29:38 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 14:29:38 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 14:29:38 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 14:29:38 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:29:38 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 14:29:38 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:29:38 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 14:29:38 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:29:38 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 14:29:38 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 14:29:38 - sqlalchemy.engine.Engine - INFO - [generated in 0.00066s] ('user',)
+23-Aug-22 14:29:38 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 14:29:38 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 14:29:38 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 14:39:48 - uvicorn.error - WARNING - StatReload detected file change in 'comunication/rabbit_init.py'. Reloading...
+23-Aug-22 14:39:48 - uvicorn.error - INFO - Shutting down
+23-Aug-22 14:39:48 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 14:39:48 - uvicorn - INFO - Shutting down...
+23-Aug-22 14:39:48 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 14:39:48 - uvicorn.error - INFO - Finished server process [12]
+23-Aug-22 14:39:51 - uvicorn.error - INFO - Started server process [37]
+23-Aug-22 14:39:51 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 14:39:51 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 14:39:51 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 14:39:51 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:39:51 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 14:39:51 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:39:51 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 14:39:51 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:39:51 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 14:39:51 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 14:39:51 - sqlalchemy.engine.Engine - INFO - [generated in 0.00068s] ('user',)
+23-Aug-22 14:39:51 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 14:39:51 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 14:39:51 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 14:43:34 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+23-Aug-22 14:43:34 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+23-Aug-22 14:43:34 - uvicorn.error - INFO - Started reloader process [7] using statreload
+23-Aug-22 14:43:35 - uvicorn.error - INFO - Started server process [12]
+23-Aug-22 14:43:35 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 14:43:35 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 14:43:36 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 14:43:36 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:43:36 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 14:43:36 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:43:36 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 14:43:36 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:43:36 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 14:43:36 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 14:43:36 - sqlalchemy.engine.Engine - INFO - [generated in 0.00062s] ('user',)
+23-Aug-22 14:43:36 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 14:43:36 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 14:43:36 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 14:45:45 - uvicorn.error - WARNING - StatReload detected file change in 'comunication/rabbit_init.py'. Reloading...
+23-Aug-22 14:45:45 - uvicorn.error - INFO - Shutting down
+23-Aug-22 14:45:46 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 14:45:46 - uvicorn - INFO - Shutting down...
+23-Aug-22 14:45:46 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 14:45:46 - uvicorn.error - INFO - Finished server process [12]
+23-Aug-22 14:45:47 - uvicorn.error - INFO - Started server process [17]
+23-Aug-22 14:45:47 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 14:45:47 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 14:45:47 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 14:45:47 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:45:47 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 14:45:47 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:45:47 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 14:45:47 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:45:47 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 14:45:47 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 14:45:47 - sqlalchemy.engine.Engine - INFO - [generated in 0.00068s] ('user',)
+23-Aug-22 14:45:47 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 14:45:47 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 14:45:47 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 14:47:34 - uvicorn.error - WARNING - StatReload detected file change in 'main.py'. Reloading...
+23-Aug-22 14:47:34 - uvicorn.error - INFO - Shutting down
+23-Aug-22 14:47:34 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 14:47:34 - uvicorn - INFO - Shutting down...
+23-Aug-22 14:47:34 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 14:47:34 - uvicorn.error - INFO - Finished server process [17]
+23-Aug-22 14:47:47 - uvicorn.error - INFO - Stopping reloader process [7]
+23-Aug-22 14:48:04 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+23-Aug-22 14:48:04 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+23-Aug-22 14:48:04 - uvicorn.error - INFO - Started reloader process [7] using statreload
+23-Aug-22 14:48:05 - uvicorn.error - INFO - Started server process [12]
+23-Aug-22 14:48:05 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 14:48:05 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 14:48:05 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 14:48:05 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:48:05 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 14:48:05 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:48:05 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 14:48:05 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:48:05 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 14:48:05 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 14:48:05 - sqlalchemy.engine.Engine - INFO - [generated in 0.00175s] ('user',)
+23-Aug-22 14:48:05 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 14:48:05 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 14:48:05 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 14:55:15 - uvicorn.error - WARNING - StatReload detected file change in 'comunication/rabbit_init.py'. Reloading...
+23-Aug-22 14:55:15 - uvicorn.error - INFO - Shutting down
+23-Aug-22 14:55:15 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 14:55:15 - uvicorn - INFO - Shutting down...
+23-Aug-22 14:55:15 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 14:55:15 - uvicorn.error - INFO - Finished server process [12]
+23-Aug-22 14:55:17 - uvicorn.error - INFO - Started server process [24]
+23-Aug-22 14:55:17 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 14:55:17 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 14:55:17 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 14:55:17 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:55:17 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 14:55:17 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:55:17 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 14:55:17 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:55:17 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 14:55:17 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 14:55:17 - sqlalchemy.engine.Engine - INFO - [generated in 0.00049s] ('user',)
+23-Aug-22 14:55:17 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 14:55:17 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 14:55:17 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 14:55:26 - uvicorn.error - WARNING - StatReload detected file change in 'comunication/rabbit_init.py'. Reloading...
+23-Aug-22 14:55:26 - uvicorn.error - INFO - Shutting down
+23-Aug-22 14:55:26 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 14:55:26 - uvicorn - INFO - Shutting down...
+23-Aug-22 14:55:26 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 14:55:26 - uvicorn.error - INFO - Finished server process [24]
+23-Aug-22 14:55:28 - uvicorn.error - INFO - Started server process [29]
+23-Aug-22 14:55:28 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 14:55:28 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 14:55:28 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 14:55:28 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:55:28 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 14:55:28 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:55:28 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 14:55:28 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:55:28 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 14:55:28 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 14:55:28 - sqlalchemy.engine.Engine - INFO - [generated in 0.00183s] ('user',)
+23-Aug-22 14:55:28 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 14:55:28 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 14:55:28 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 14:55:31 - uvicorn.error - WARNING - StatReload detected file change in 'comunication/rabbit_init.py'. Reloading...
+23-Aug-22 14:55:31 - uvicorn.error - INFO - Shutting down
+23-Aug-22 14:55:31 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 14:55:31 - uvicorn - INFO - Shutting down...
+23-Aug-22 14:55:31 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 14:55:31 - uvicorn.error - INFO - Finished server process [29]
+23-Aug-22 14:55:33 - uvicorn.error - INFO - Started server process [34]
+23-Aug-22 14:55:33 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 14:55:33 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 14:55:33 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 14:55:33 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:55:33 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 14:55:33 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:55:33 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 14:55:33 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 14:55:33 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 14:55:33 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 14:55:33 - sqlalchemy.engine.Engine - INFO - [generated in 0.00056s] ('user',)
+23-Aug-22 14:55:33 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 14:55:33 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 14:55:33 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 14:55:46 - uvicorn.error - WARNING - StatReload detected file change in 'main.py'. Reloading...
+23-Aug-22 14:55:46 - uvicorn.error - INFO - Shutting down
+23-Aug-22 14:55:46 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 14:55:46 - uvicorn - INFO - Shutting down...
+23-Aug-22 14:55:46 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 14:55:46 - uvicorn.error - INFO - Finished server process [34]
+23-Aug-22 14:55:58 - uvicorn.error - INFO - Stopping reloader process [7]
+23-Aug-22 15:41:26 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+23-Aug-22 15:41:26 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+23-Aug-22 15:41:26 - uvicorn.error - INFO - Started reloader process [7] using statreload
+23-Aug-22 15:41:27 - uvicorn.error - INFO - Started server process [12]
+23-Aug-22 15:41:27 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 15:41:27 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 15:41:37 - uvicorn.error - ERROR - Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/starlette/routing.py", line 635, in lifespan
+    async with self.lifespan_context(app):
+  File "/usr/local/lib/python3.6/site-packages/starlette/routing.py", line 530, in __aenter__
+    await self._router.startup()
+  File "/usr/local/lib/python3.6/site-packages/starlette/routing.py", line 612, in startup
+    await handler()
+  File "/app/main.py", line 36, in startup_event
+    await init_db()
+  File "/app/db/databaseConfig.py", line 30, in init_db
+    async with engine.begin() as conn:
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/ext/asyncio/base.py", line 60, in __aenter__
+    return await self.start(is_ctxmanager=True)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/ext/asyncio/engine.py", line 598, in start
+    await self.conn.start(is_ctxmanager=is_ctxmanager)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/ext/asyncio/engine.py", line 157, in start
+    await (greenlet_spawn(self.sync_engine.connect))
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/future/engine.py", line 406, in connect
+    return super(Engine, self).connect()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 777, in connect
+    await_only(self.asyncpg.connect(*arg, **kw)),
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.6/site-packages/asyncpg/connection.py", line 2111, in connect
+    max_cacheable_statement_size=max_cacheable_statement_size,
+  File "/usr/local/lib/python3.6/site-packages/asyncpg/connect_utils.py", line 903, in _connect
+    raise last_error
+  File "/usr/local/lib/python3.6/site-packages/asyncpg/connect_utils.py", line 896, in _connect
+    record_class=record_class,
+  File "/usr/local/lib/python3.6/site-packages/asyncpg/connect_utils.py", line 781, in _connect_addr
+    return await __connect_addr(params, timeout, True, *args)
+  File "/usr/local/lib/python3.6/site-packages/asyncpg/connect_utils.py", line 833, in __connect_addr
+    tr, pr = await compat.wait_for(connector, timeout=timeout)
+  File "/usr/local/lib/python3.6/site-packages/asyncpg/compat.py", line 66, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/local/lib/python3.6/asyncio/tasks.py", line 358, in wait_for
+    return fut.result()
+  File "/usr/local/lib/python3.6/site-packages/asyncpg/connect_utils.py", line 695, in _create_ssl_connection
+    host, port)
+  File "/usr/local/lib/python3.6/asyncio/base_events.py", line 754, in create_connection
+    infos = f1.result()
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+23-Aug-22 15:41:37 - uvicorn.error - ERROR - Application startup failed. Exiting.
+23-Aug-22 15:41:38 - uvicorn.error - INFO - Stopping reloader process [7]
+23-Aug-22 15:45:22 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+23-Aug-22 15:45:22 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+23-Aug-22 15:45:22 - uvicorn.error - INFO - Started reloader process [8] using statreload
+23-Aug-22 15:45:23 - uvicorn.error - INFO - Started server process [13]
+23-Aug-22 15:45:23 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 15:45:23 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 15:45:23 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 15:45:23 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 15:45:23 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 15:45:23 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 15:45:23 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 15:45:23 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 15:45:23 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 15:45:23 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 15:45:23 - sqlalchemy.engine.Engine - INFO - [generated in 0.00056s] ('user',)
+23-Aug-22 15:45:23 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 15:45:23 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 15:45:23 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 15:45:35 - uvicorn.error - WARNING - StatReload detected file change in 'comunication/rabbit_init.py'. Reloading...
+23-Aug-22 15:45:35 - uvicorn.error - INFO - Shutting down
+23-Aug-22 15:45:35 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 15:45:35 - uvicorn - INFO - Shutting down...
+23-Aug-22 15:45:35 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 15:45:35 - uvicorn.error - INFO - Finished server process [13]
+23-Aug-22 15:45:37 - uvicorn.error - INFO - Started server process [18]
+23-Aug-22 15:45:37 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 15:45:37 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 15:45:37 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 15:45:37 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 15:45:37 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 15:45:37 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 15:45:37 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 15:45:37 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 15:45:37 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 15:45:37 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 15:45:37 - sqlalchemy.engine.Engine - INFO - [generated in 0.00042s] ('user',)
+23-Aug-22 15:45:37 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 15:45:37 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 15:45:37 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 15:47:28 - uvicorn.error - WARNING - StatReload detected file change in 'main.py'. Reloading...
+23-Aug-22 15:47:28 - uvicorn.error - INFO - Shutting down
+23-Aug-22 15:47:28 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 15:47:28 - uvicorn - INFO - Shutting down...
+23-Aug-22 15:47:28 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 15:47:28 - uvicorn.error - INFO - Finished server process [18]
+23-Aug-22 15:47:30 - uvicorn.error - INFO - Started server process [23]
+23-Aug-22 15:47:30 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 15:47:30 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 15:47:30 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 15:47:30 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 15:47:30 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 15:47:30 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 15:47:30 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 15:47:30 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 15:47:30 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 15:47:30 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 15:47:30 - sqlalchemy.engine.Engine - INFO - [generated in 0.00064s] ('user',)
+23-Aug-22 15:47:30 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 15:47:30 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 15:47:30 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 15:47:47 - uvicorn.error - WARNING - StatReload detected file change in 'main.py'. Reloading...
+23-Aug-22 15:47:47 - uvicorn.error - INFO - Shutting down
+23-Aug-22 15:47:47 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 15:47:47 - uvicorn - INFO - Shutting down...
+23-Aug-22 15:47:47 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 15:47:47 - uvicorn.error - INFO - Finished server process [23]
+23-Aug-22 15:47:48 - uvicorn.error - INFO - Started server process [29]
+23-Aug-22 15:47:49 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 15:47:49 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 15:47:49 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 15:47:49 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 15:47:49 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 15:47:49 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 15:47:49 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 15:47:49 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 15:47:49 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 15:47:49 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 15:47:49 - sqlalchemy.engine.Engine - INFO - [generated in 0.00056s] ('user',)
+23-Aug-22 15:47:49 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 15:47:49 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 15:47:49 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 15:52:34 - uvicorn.error - WARNING - StatReload detected file change in 'comunication/rabbit_consumer.py'. Reloading...
+23-Aug-22 15:52:34 - uvicorn.error - INFO - Shutting down
+23-Aug-22 15:52:34 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 15:52:34 - uvicorn - INFO - Shutting down...
+23-Aug-22 15:52:34 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 15:52:34 - uvicorn.error - INFO - Finished server process [29]
+23-Aug-22 15:52:36 - uvicorn.error - WARNING - StatReload detected file change in 'comunication/rabbit_consumer.py'. Reloading...
+23-Aug-22 15:52:37 - uvicorn.error - INFO - Started server process [40]
+23-Aug-22 15:52:37 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 15:52:37 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - [generated in 0.00164s] ('user',)
+23-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 15:52:37 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 15:52:37 - uvicorn.error - INFO - Application startup complete.

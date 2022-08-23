@@ -1,26 +1,16 @@
-## docker file src/templete.dockerfile 
-
-# pull official base image
-FROM python:3.9-slim-buster 
-
+#pull official base image
+FROM python:3.6-slim-buster
 
 WORKDIR /app/
 
-
-ENV PYTHONDONTWRITEBYTECODE 1
-#   Prevents Python from writing pyc files to disc
-ENV PYTHONUNBUFFERED 1
-#   Prevents Python from buffering stdout and stderr
-
-# RUN apt-get update \
-#   && apt-get -y install libpq-dev python-dev \
-#   && apt-get -y install build-essential
+RUN apt-get update \
+  && apt-get -y install libpq-dev python-dev \
+  && apt-get -y install build-essential
 
 # install python dependencies
 RUN pip install --upgrade pip
 RUN pip install -U setuptools
 
-# Install Requirements
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
@@ -28,10 +18,7 @@ COPY ./start.sh /start.sh
 RUN chmod +x /start.sh
 
 COPY ./app /app
-# ENV PYTHONPATH=/app
+ENV PYTHONPATH=/app
 EXPOSE 80
 
-# CMD [ "touch", "templete.txt" ]
-# CMD ["uvicorn","main:app" ]
-CMD ["/start.sh" ]
-#    command: uvicorn main:app --reload --workers 1 --host 0.0.0.0 --port 8000
+CMD ["/start.sh"]

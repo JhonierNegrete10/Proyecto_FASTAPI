@@ -12,4 +12,4 @@
 
 python main.py 
 
-# celery -A celery_worker.celery worker --loglevel=info
+# celery -A celeryWorker.celery worker --loglevel=info
