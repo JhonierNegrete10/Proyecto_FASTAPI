@@ -37,7 +37,7 @@ async def create_user_db(user: UserIn,
     user.email = user.email.lower()
     
     #todo user exist in the db 
-    user_exist = userCrud.get_by_email(user.email, session)
+    user_exist = await userCrud.get_by_email(user.email, session)
     
     #todo riase error 
     print(user_exist)

@@ -2,6 +2,7 @@ version: '3'
 
 services:
   db:
+    container_name: db_user
     image: postgres:14-alpine
     restart: always
     volumes:
@@ -13,15 +14,26 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=database-async
 
+  pgadmin:
+      container_name: pgadmin
+      image: dpage/pgadmin4
+      environment:
+        - PGADMIN_DEFAULT_EMAIL=admin@membo.pro
+        - PGADMIN_DEFAULT_PASSWORD=calidad
+      ports:
+        - 5050:80
+      depends_on:
+        - db
+
   backend:
+    container_name: backend_prueba
     ports:
       - 8000:80
     build:
       context: ./src
       dockerfile: dockerfile
     image: backend_prueba
-    # networks:
-    #   - deployml_network
+
     volumes:
       - ./src/app:/app
     environment:
@@ -35,47 +47,94 @@ services:
       - FIRST_SUPERUSER=super_user@example.com
       - FIRST_SUPERUSER_PASSWORD=secretpassword
       - RABBITMQ_HOST=rabbitmq
-      - QUEUE_NAME=ml_queue
+      - QUEUE_NAME=queue_name
     depends_on:
       - db
       - rabbitmq
+      - flower
     
   rabbitmq:
+    container_name: rabbitmq
     image: rabbitmq:3-management
-    # networks:
-    # - deployml_network
+
     ports:
       - 4369:4369
       - 5672:5672
       - 25672:25672
       - 15672:15672
-    # volumes:
-    #   - rabbitmq_data:/bitnami
+    volumes:
+      - rabbitmq_data:/rabbitmq
 
-  # celery-flower:
-  #   image: gregsi/latest-celery-flower-docker:latest
-  #   environment:
-  #     - AMQP_USERNAME=user
-  #     - AMQP_PASSWORD=bitnami
-  #     - AMQP_ADMIN_USERNAME=user
-  #     - AMQP_ADMIN_PASSWORD=bitnami
-  #     - AMQP_HOST=rabbitmq
-  #     - AMQP_PORT=5672
-  #     - AMQP_ADMIN_HOST=rabbitmq
-  #     - AMQP_ADMIN_PORT=15672
-  #     - FLOWER_BASIC_AUTH=user:test
-  #   ports:
-  #     - 5555:5555
-  #   depends_on:
-  #     - rabbitmq
+  flower:
+    container_name: flower
+    image: gregsi/latest-celery-flower-docker:latest
+    environment:
+      - AMQP_USERNAME=guest
+      - AMQP_PASSWORD=guest
+      - AMQP_ADMIN_USERNAME=guest
+      - AMQP_ADMIN_PASSWORD=guest
+      - AMQP_HOST=rabbitmq
+      - AMQP_PORT=5672
+      - AMQP_ADMIN_HOST=rabbitmq
+      - AMQP_ADMIN_PORT=15672
+      - FLOWER_BASIC_AUTH=user:test
+    ports:
+      - 5555:5555
+    depends_on:
+      - rabbitmq
+
+
+  worker:
+    container_name: worker
+    build: 
+      context: ./src
+    command: celery -A workers worker -l INFO 
+    volumes:
+      - ./src/app:/app
+    depends_on:
+      - backend
+
+
+
+
 volumes:
   psqldata-async:
     driver: local
-  # rabbitmq_data:
-  #   driver: local
+  rabbitmq_data:
+    driver: local
 
 # networks:
 #     deployml_network:
 
+# redis:
+#     image: redis:6-alpine
+
+#   celery_worker:
+#     build:
+#       context: .
+#       dockerfile: ./compose/local/fastapi/Dockerfile
+#     image: fastapi_celery_example_celery_worker
+#     command: /start-celeryworker
+#     volumes:
+#       - .:/app
+#     env_file:
+#       - .env/.dev-sample
+#     depends_on:
+#       - redis
+#       - db
+
+#   celery_beat:
+#     build:
+#       context: .
+#       dockerfile: ./compose/local/fastapi/Dockerfile
+#     image: fastapi_celery_example_celery_beat
+#     command: /start-celerybeat
+#     volumes:
+#       - .:/app
+#     env_file:
+#       - .env/.dev-sample
+#     depends_on:
+#       - redis
+#       - db
 
     

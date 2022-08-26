@@ -12,4 +12,5 @@
 
 python main.py 
 
+# celery -A workers worker -l INFO 
 # celery -A celeryWorker.celery worker --loglevel=info

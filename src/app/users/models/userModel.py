@@ -9,6 +9,7 @@ from typing import List, Optional
 from pydantic import EmailStr 
 from datetime import date, datetime
 from sqlmodel import Field, SQLModel
+from uuid import UUID, uuid4
 
 """
 - User: Table of sql : same time userIn  
@@ -28,7 +29,9 @@ class gender(Enum):
 
 #Models to response for the api - Pydantic 
 class UserBase(SQLModel):
-    email: EmailStr= Field(..., primary_key=True)
+    email: EmailStr= Field(...,
+                        #    primary_key=True
+                           )
 
 
 class UserLogin(UserBase):
@@ -64,7 +67,7 @@ class UserIn(UserBase):
         default = "300122344"
     )
      
-
+ 
         
 #Schema Of the user in the database  
 class User(UserIn, table= True): 
@@ -72,6 +75,13 @@ class User(UserIn, table= True):
      - model of the table, in the db  
     
     """
+    id: UUID = Field(
+        default_factory=uuid4,
+        primary_key=True,
+        index=True,
+        nullable=False,
+    )
+    
     photo: Optional[str] = None
     
     created_at:datetime =datetime.now() 

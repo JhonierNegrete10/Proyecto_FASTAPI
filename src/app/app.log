@@ -9066,3 +9066,2229 @@ socket.gaierror: [Errno -3] Temporary failure in name resolution
 23-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - COMMIT
 23-Aug-22 15:52:37 - uvicorn - INFO - INIT: ___end___
 23-Aug-22 15:52:37 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:25:30 - uvicorn.error - WARNING - StatReload detected file change in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 21:25:30 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:25:31 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:25:31 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:25:31 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:25:31 - uvicorn.error - INFO - Finished server process [40]
+23-Aug-22 21:25:36 - uvicorn.error - INFO - Stopping reloader process [8]
+23-Aug-22 21:43:05 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+23-Aug-22 21:43:05 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+23-Aug-22 21:43:05 - uvicorn.error - INFO - Started reloader process [8] using statreload
+23-Aug-22 21:43:06 - uvicorn.error - INFO - Started server process [14]
+23-Aug-22 21:43:06 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:43:06 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:43:06 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:43:06 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:43:06 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:43:06 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:43:06 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:43:06 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:43:06 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:43:06 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:43:06 - sqlalchemy.engine.Engine - INFO - [generated in 0.00183s] ('user',)
+23-Aug-22 21:43:06 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:43:06 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:43:06 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:45:48 - uvicorn.error - WARNING - StatReload detected file change in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 21:45:48 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:45:48 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:45:48 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:45:48 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:45:48 - uvicorn.error - INFO - Finished server process [14]
+23-Aug-22 21:45:51 - uvicorn.error - INFO - Started server process [20]
+23-Aug-22 21:45:51 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:45:51 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:45:51 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:45:51 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:45:51 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:45:51 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:45:51 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:45:51 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:45:51 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:45:51 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:45:51 - sqlalchemy.engine.Engine - INFO - [generated in 0.00040s] ('user',)
+23-Aug-22 21:45:51 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:45:51 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:45:51 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:45:53 - uvicorn.error - WARNING - StatReload detected file change in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 21:45:53 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:45:53 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:45:53 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:45:53 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:45:53 - uvicorn.error - INFO - Finished server process [20]
+23-Aug-22 21:45:55 - uvicorn.error - INFO - Started server process [26]
+23-Aug-22 21:45:55 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:45:55 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:45:55 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:45:55 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:45:55 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:45:55 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:45:55 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:45:55 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:45:55 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:45:55 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:45:55 - sqlalchemy.engine.Engine - INFO - [generated in 0.00035s] ('user',)
+23-Aug-22 21:45:55 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:45:55 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:45:55 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:45:57 - uvicorn.error - WARNING - StatReload detected file change in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 21:45:57 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:45:57 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:45:57 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:45:57 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:45:57 - uvicorn.error - INFO - Finished server process [26]
+23-Aug-22 21:45:59 - uvicorn.error - INFO - Started server process [32]
+23-Aug-22 21:45:59 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:45:59 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:45:59 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:45:59 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:45:59 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:45:59 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:45:59 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:45:59 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:45:59 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:45:59 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:45:59 - sqlalchemy.engine.Engine - INFO - [generated in 0.00049s] ('user',)
+23-Aug-22 21:45:59 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:45:59 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:45:59 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:46:00 - uvicorn.error - WARNING - StatReload detected file change in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 21:46:00 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:46:00 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:46:00 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:46:00 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:46:00 - uvicorn.error - INFO - Finished server process [32]
+23-Aug-22 21:46:02 - uvicorn.error - WARNING - StatReload detected file change in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 21:46:03 - uvicorn.error - INFO - Started server process [42]
+23-Aug-22 21:46:03 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:46:03 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:46:03 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:46:03 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:46:03 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:46:03 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:46:03 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:46:03 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:46:03 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:46:03 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:46:03 - sqlalchemy.engine.Engine - INFO - [generated in 0.00039s] ('user',)
+23-Aug-22 21:46:03 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:46:03 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:46:03 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:46:06 - uvicorn.error - WARNING - StatReload detected file change in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 21:46:06 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:46:06 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:46:06 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:46:06 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:46:06 - uvicorn.error - INFO - Finished server process [42]
+23-Aug-22 21:46:09 - uvicorn.error - INFO - Started server process [48]
+23-Aug-22 21:46:09 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:46:09 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:46:09 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:46:09 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:46:09 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:46:09 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:46:09 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:46:09 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:46:09 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:46:09 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:46:09 - sqlalchemy.engine.Engine - INFO - [generated in 0.00041s] ('user',)
+23-Aug-22 21:46:09 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:46:09 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:46:09 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:46:13 - uvicorn.error - WARNING - StatReload detected file change in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 21:46:13 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:46:13 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:46:13 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:46:13 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:46:13 - uvicorn.error - INFO - Finished server process [48]
+23-Aug-22 21:46:15 - uvicorn.error - INFO - Started server process [54]
+23-Aug-22 21:46:15 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:46:15 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:46:15 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:46:15 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:46:15 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:46:15 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:46:16 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:46:16 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:46:16 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:46:16 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:46:16 - sqlalchemy.engine.Engine - INFO - [generated in 0.00220s] ('user',)
+23-Aug-22 21:46:16 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:46:16 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:46:16 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:49:48 - uvicorn.error - WARNING - StatReload detected file change in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 21:49:48 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:49:48 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:49:48 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:49:48 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:49:48 - uvicorn.error - INFO - Finished server process [54]
+23-Aug-22 21:49:51 - uvicorn.error - INFO - Started server process [68]
+23-Aug-22 21:49:51 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:49:51 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:49:52 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:49:52 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:49:52 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:49:52 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:49:52 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:49:52 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:49:52 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:49:52 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:49:52 - sqlalchemy.engine.Engine - INFO - [generated in 0.00072s] ('user',)
+23-Aug-22 21:49:52 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:49:52 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:49:52 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:49:55 - uvicorn.error - WARNING - StatReload detected file change in 'main.py'. Reloading...
+23-Aug-22 21:49:55 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:49:55 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:49:55 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:49:55 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:49:55 - uvicorn.error - INFO - Finished server process [68]
+23-Aug-22 21:49:59 - uvicorn.error - INFO - Started server process [74]
+23-Aug-22 21:49:59 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:49:59 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:49:59 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:49:59 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:49:59 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:49:59 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:49:59 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:49:59 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:49:59 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:49:59 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:49:59 - sqlalchemy.engine.Engine - INFO - [generated in 0.00812s] ('user',)
+23-Aug-22 21:49:59 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:49:59 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:49:59 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:50:34 - uvicorn.error - WARNING - StatReload detected file change in 'main.py'. Reloading...
+23-Aug-22 21:50:34 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:50:35 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:50:35 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:50:35 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:50:35 - uvicorn.error - INFO - Finished server process [74]
+23-Aug-22 21:50:36 - uvicorn.error - INFO - Stopping reloader process [8]
+23-Aug-22 21:51:01 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+23-Aug-22 21:51:01 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+23-Aug-22 21:51:01 - uvicorn.error - INFO - Started reloader process [7] using statreload
+23-Aug-22 21:51:03 - uvicorn.error - INFO - Started server process [13]
+23-Aug-22 21:51:03 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:51:03 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:51:03 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:51:03 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:51:03 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:51:03 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:51:03 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:51:03 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:51:03 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:51:03 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:51:03 - sqlalchemy.engine.Engine - INFO - [generated in 0.00106s] ('user',)
+23-Aug-22 21:51:03 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:51:03 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:51:03 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:51:51 - uvicorn.error - WARNING - StatReload detected file change in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 21:51:52 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:51:52 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:51:52 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:51:52 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:51:52 - uvicorn.error - INFO - Finished server process [13]
+23-Aug-22 21:51:55 - uvicorn.error - INFO - Started server process [19]
+23-Aug-22 21:51:55 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:51:55 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:51:55 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:51:55 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:51:55 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:51:55 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:51:55 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:51:55 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:51:55 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:51:55 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:51:55 - sqlalchemy.engine.Engine - INFO - [generated in 0.00079s] ('user',)
+23-Aug-22 21:51:55 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:51:55 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:51:55 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:52:00 - uvicorn.error - WARNING - StatReload detected file change in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 21:52:00 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:52:00 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:52:00 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:52:00 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:52:00 - uvicorn.error - INFO - Finished server process [19]
+23-Aug-22 21:52:03 - uvicorn.error - INFO - Started server process [25]
+23-Aug-22 21:52:03 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:52:03 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:52:03 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:52:03 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:52:03 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:52:03 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:52:03 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:52:03 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:52:03 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:52:03 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:52:03 - sqlalchemy.engine.Engine - INFO - [generated in 0.00161s] ('user',)
+23-Aug-22 21:52:03 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:52:03 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:52:03 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:56:09 - pika.adapters.utils.io_services_utils - ERROR - _AsyncBaseTransport._produce() failed, aborting connection: error=ConnectionResetError(104, 'Connection reset by peer'); sock=<socket.socket fd=6, family=AddressFamily.AF_INET, type=2049, proto=6, laddr=('172.18.0.6', 58890)>; Caller's stack:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/pika/adapters/utils/io_services_utils.py", line 1103, in _on_socket_writable
+    self._produce()
+  File "/usr/local/lib/python3.6/site-packages/pika/adapters/utils/io_services_utils.py", line 820, in _produce
+    self._tx_buffers[0])
+  File "/usr/local/lib/python3.6/site-packages/pika/adapters/utils/io_services_utils.py", line 79, in retry_sigint_wrap
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/pika/adapters/utils/io_services_utils.py", line 861, in _sigint_safe_send
+    return sock.send(data)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/pika/adapters/utils/io_services_utils.py", line 1103, in _on_socket_writable
+    self._produce()
+  File "/usr/local/lib/python3.6/site-packages/pika/adapters/utils/io_services_utils.py", line 820, in _produce
+    self._tx_buffers[0])
+  File "/usr/local/lib/python3.6/site-packages/pika/adapters/utils/io_services_utils.py", line 79, in retry_sigint_wrap
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/pika/adapters/utils/io_services_utils.py", line 861, in _sigint_safe_send
+    return sock.send(data)
+ConnectionResetError: [Errno 104] Connection reset by peer
+23-Aug-22 21:56:09 - pika.adapters.base_connection - ERROR - connection_lost: StreamLostError: ("Stream connection lost: ConnectionResetError(104, 'Connection reset by peer')",)
+23-Aug-22 21:56:09 - pika.adapters.blocking_connection - ERROR - Unexpected connection close detected: StreamLostError: ("Stream connection lost: ConnectionResetError(104, 'Connection reset by peer')",)
+23-Aug-22 21:56:09 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.6/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.6/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.6/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.6/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.6/site-packages/fastapi/routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/usr/local/lib/python3.6/site-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/usr/local/lib/python3.6/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/usr/local/lib/python3.6/site-packages/anyio/to_thread.py", line 32, in run_sync
+    func, *args, cancellable=cancellable, limiter=limiter
+  File "/usr/local/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/usr/local/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/usr/local/lib/python3.6/site-packages/contextvars/__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "/app/main.py", line 45, in add_order
+    publish()
+  File "/app/comunication/rabbit_init.py", line 17, in publish
+    properties=pika.BasicProperties(delivery_mode=2))
+  File "/usr/local/lib/python3.6/site-packages/pika/adapters/blocking_connection.py", line 2262, in basic_publish
+    self._flush_output()
+  File "/usr/local/lib/python3.6/site-packages/pika/adapters/blocking_connection.py", line 1350, in _flush_output
+    self._connection._flush_output(lambda: self.is_closed, *waiters)
+  File "/usr/local/lib/python3.6/site-packages/pika/adapters/blocking_connection.py", line 523, in _flush_output
+    raise self._closed_result.value.error
+pika.exceptions.StreamLostError: Stream connection lost: ConnectionResetError(104, 'Connection reset by peer')
+23-Aug-22 21:57:20 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.6/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.6/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.6/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.6/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.6/site-packages/fastapi/routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/usr/local/lib/python3.6/site-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/usr/local/lib/python3.6/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/usr/local/lib/python3.6/site-packages/anyio/to_thread.py", line 32, in run_sync
+    func, *args, cancellable=cancellable, limiter=limiter
+  File "/usr/local/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/usr/local/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/usr/local/lib/python3.6/site-packages/contextvars/__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "/app/main.py", line 45, in add_order
+    publish()
+  File "/app/comunication/rabbit_init.py", line 17, in publish
+    properties=pika.BasicProperties(delivery_mode=2))
+  File "/usr/local/lib/python3.6/site-packages/pika/adapters/blocking_connection.py", line 2261, in basic_publish
+    mandatory=mandatory)
+  File "/usr/local/lib/python3.6/site-packages/pika/channel.py", line 423, in basic_publish
+    self._raise_if_not_open()
+  File "/usr/local/lib/python3.6/site-packages/pika/channel.py", line 1403, in _raise_if_not_open
+    raise exceptions.ChannelWrongStateError('Channel is closed.')
+pika.exceptions.ChannelWrongStateError: Channel is closed.
+23-Aug-22 21:57:45 - uvicorn.error - WARNING - StatReload detected file change in 'celerys/celeryWorker.py'. Reloading...
+23-Aug-22 21:57:45 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:57:45 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:57:45 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:57:45 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:57:45 - uvicorn.error - INFO - Finished server process [25]
+23-Aug-22 21:57:48 - uvicorn.error - INFO - Started server process [77]
+23-Aug-22 21:57:48 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:57:48 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:57:48 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:57:48 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:57:48 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:57:48 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:57:48 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:57:48 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:57:48 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:57:48 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:57:48 - sqlalchemy.engine.Engine - INFO - [generated in 0.00048s] ('user',)
+23-Aug-22 21:57:48 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:57:48 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:57:48 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:57:58 - uvicorn.error - WARNING - StatReload detected file change in 'main.py'. Reloading...
+23-Aug-22 21:57:58 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:57:58 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:57:58 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:57:58 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:57:58 - uvicorn.error - INFO - Finished server process [77]
+23-Aug-22 21:58:00 - uvicorn.error - INFO - Started server process [83]
+23-Aug-22 21:58:00 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:58:00 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:58:00 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:58:00 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:58:00 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:58:00 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:58:00 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:58:00 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:58:00 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:58:00 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:58:00 - sqlalchemy.engine.Engine - INFO - [generated in 0.00040s] ('user',)
+23-Aug-22 21:58:00 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:58:00 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:58:00 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:58:01 - uvicorn.error - WARNING - StatReload detected file change in 'main.py'. Reloading...
+23-Aug-22 21:58:01 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:58:02 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:58:02 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:58:02 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:58:02 - uvicorn.error - INFO - Finished server process [83]
+23-Aug-22 21:58:04 - uvicorn.error - INFO - Started server process [89]
+23-Aug-22 21:58:04 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:58:04 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:58:04 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:58:04 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:58:04 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:58:04 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:58:04 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:58:04 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:58:04 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:58:04 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:58:04 - sqlalchemy.engine.Engine - INFO - [generated in 0.00039s] ('user',)
+23-Aug-22 21:58:04 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:58:04 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:58:04 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:58:04 - uvicorn.error - WARNING - StatReload detected file change in 'main.py'. Reloading...
+23-Aug-22 21:58:04 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:58:04 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:58:04 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:58:04 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:58:04 - uvicorn.error - INFO - Finished server process [89]
+23-Aug-22 21:58:06 - uvicorn.error - INFO - Started server process [95]
+23-Aug-22 21:58:06 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:58:06 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:58:07 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:58:07 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:58:07 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:58:07 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:58:07 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:58:07 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:58:07 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:58:07 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:58:07 - sqlalchemy.engine.Engine - INFO - [generated in 0.00075s] ('user',)
+23-Aug-22 21:58:07 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:58:07 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:58:07 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:58:07 - uvicorn.error - WARNING - StatReload detected file change in 'main.py'. Reloading...
+23-Aug-22 21:58:07 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:58:08 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:58:08 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:58:08 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:58:08 - uvicorn.error - INFO - Finished server process [95]
+23-Aug-22 21:58:10 - uvicorn.error - INFO - Started server process [101]
+23-Aug-22 21:58:10 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:58:10 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:58:10 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:58:10 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:58:10 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:58:10 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:58:10 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:58:10 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:58:10 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:58:10 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:58:10 - sqlalchemy.engine.Engine - INFO - [generated in 0.00049s] ('user',)
+23-Aug-22 21:58:10 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:58:10 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:58:10 - uvicorn.error - INFO - Application startup complete.
+23-Aug-22 21:58:22 - uvicorn.error - WARNING - StatReload detected file change in 'main.py'. Reloading...
+23-Aug-22 21:58:22 - uvicorn.error - INFO - Shutting down
+23-Aug-22 21:58:22 - uvicorn.error - INFO - Waiting for application shutdown.
+23-Aug-22 21:58:22 - uvicorn - INFO - Shutting down...
+23-Aug-22 21:58:22 - uvicorn.error - INFO - Application shutdown complete.
+23-Aug-22 21:58:22 - uvicorn.error - INFO - Finished server process [101]
+23-Aug-22 21:58:24 - uvicorn.error - INFO - Started server process [107]
+23-Aug-22 21:58:24 - uvicorn.error - INFO - Waiting for application startup.
+23-Aug-22 21:58:24 - uvicorn - INFO - INIT: ___Starting up___
+23-Aug-22 21:58:25 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+23-Aug-22 21:58:25 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:58:25 - sqlalchemy.engine.Engine - INFO - select current_schema()
+23-Aug-22 21:58:25 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:58:25 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+23-Aug-22 21:58:25 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+23-Aug-22 21:58:25 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+23-Aug-22 21:58:25 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+23-Aug-22 21:58:25 - sqlalchemy.engine.Engine - INFO - [generated in 0.00527s] ('user',)
+23-Aug-22 21:58:25 - sqlalchemy.engine.Engine - INFO - COMMIT
+23-Aug-22 21:58:25 - uvicorn - INFO - INIT: ___end___
+23-Aug-22 21:58:25 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 13:11:29 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+24-Aug-22 13:11:29 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+24-Aug-22 13:11:29 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+24-Aug-22 13:11:30 - uvicorn.error - INFO - Started server process [11]
+24-Aug-22 13:11:30 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 13:11:30 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 13:11:30 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 13:11:30 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 13:11:30 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 13:11:30 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 13:11:31 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 13:11:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 13:11:31 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 13:11:31 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 13:11:31 - sqlalchemy.engine.Engine - INFO - [generated in 0.00256s] ('user',)
+24-Aug-22 13:11:31 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 13:11:31 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 13:11:31 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 13:12:50 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+24-Aug-22 13:12:50 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+24-Aug-22 13:12:50 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+24-Aug-22 13:12:50 - uvicorn.error - INFO - Started server process [11]
+24-Aug-22 13:12:50 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 13:12:50 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 13:12:51 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 13:12:51 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 13:12:51 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 13:12:51 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 13:12:51 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 13:12:51 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 13:12:51 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 13:12:51 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 13:12:51 - sqlalchemy.engine.Engine - INFO - [generated in 0.00035s] ('user',)
+24-Aug-22 13:12:51 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 13:12:51 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 13:12:51 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 13:14:50 - uvicorn.error - WARNING - StatReload detected changes in 'workers/tasks.py'. Reloading...
+24-Aug-22 13:14:50 - uvicorn.error - INFO - Shutting down
+24-Aug-22 13:14:50 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 13:14:50 - uvicorn - INFO - Shutting down...
+24-Aug-22 13:14:50 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 13:14:50 - uvicorn.error - INFO - Finished server process [11]
+24-Aug-22 13:15:54 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+24-Aug-22 13:15:54 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+24-Aug-22 13:15:54 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+24-Aug-22 13:15:55 - uvicorn.error - INFO - Started server process [11]
+24-Aug-22 13:15:55 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 13:15:55 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 13:15:55 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 13:15:55 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 13:15:55 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 13:15:55 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 13:15:55 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 13:15:55 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 13:15:55 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 13:15:55 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 13:15:55 - sqlalchemy.engine.Engine - INFO - [generated in 0.00036s] ('user',)
+24-Aug-22 13:15:55 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 13:15:55 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 13:15:55 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 13:38:55 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+24-Aug-22 13:38:55 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+24-Aug-22 13:38:55 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+24-Aug-22 13:38:56 - uvicorn.error - INFO - Started server process [11]
+24-Aug-22 13:38:56 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 13:38:56 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 13:38:56 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 13:38:56 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 13:38:56 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 13:38:56 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 13:38:56 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 13:38:56 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 13:38:56 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 13:38:56 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 13:38:56 - sqlalchemy.engine.Engine - INFO - [generated in 0.00059s] ('user',)
+24-Aug-22 13:38:56 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 13:38:56 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 13:38:56 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 13:41:44 - uvicorn - INFO - routers: entry
+24-Aug-22 13:41:44 - uvicorn - INFO - endpoint: entry
+24-Aug-22 13:41:44 - uvicorn - INFO - crud: entry
+24-Aug-22 13:41:44 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 13:41:44 - sqlalchemy.engine.Engine - INFO - SELECT "user".email, "user".birth_date, "user".hashed_password, "user".first_name, "user".last_name, "user".gender, "user".phone, "user".photo, "user".created_at, "user".updated_at, "user".is_super_user, "user".is_active, "user".verify_code 
+FROM "user"
+24-Aug-22 13:41:44 - sqlalchemy.engine.Engine - INFO - [generated in 0.00157s] ()
+24-Aug-22 13:41:44 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+24-Aug-22 13:42:50 - uvicorn.error - WARNING - StatReload detected changes in 'users/endpoints/usersEndpoints.py'. Reloading...
+24-Aug-22 13:42:50 - uvicorn.error - INFO - Shutting down
+24-Aug-22 13:42:50 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 13:42:50 - uvicorn - INFO - Shutting down...
+24-Aug-22 13:42:50 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 13:42:50 - uvicorn.error - INFO - Finished server process [11]
+24-Aug-22 13:42:53 - uvicorn.error - INFO - Started server process [16]
+24-Aug-22 13:42:53 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 13:42:53 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 13:42:53 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 13:42:53 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 13:42:53 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 13:42:53 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 13:42:53 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 13:42:53 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 13:42:53 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 13:42:53 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 13:42:53 - sqlalchemy.engine.Engine - INFO - [generated in 0.00173s] ('user',)
+24-Aug-22 13:42:53 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 13:42:53 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 13:42:53 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 13:42:57 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 13:42:57 - sqlalchemy.engine.Engine - INFO - SELECT "user".email, "user".birth_date, "user".hashed_password, "user".first_name, "user".last_name, "user".gender, "user".phone, "user".photo, "user".created_at, "user".updated_at, "user".is_super_user, "user".is_active, "user".verify_code 
+FROM "user" 
+WHERE "user".email = %s
+24-Aug-22 13:42:57 - sqlalchemy.engine.Engine - INFO - [generated in 0.00559s] ('user@example.com',)
+24-Aug-22 13:42:58 - uvicorn - INFO - endpoint: entry
+24-Aug-22 13:42:58 - uvicorn - INFO - crud: entry
+24-Aug-22 13:42:58 - sqlalchemy.engine.Engine - INFO - INSERT INTO "user" (email, birth_date, hashed_password, first_name, last_name, gender, phone, photo, created_at, updated_at, is_super_user, is_active, verify_code) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+24-Aug-22 13:42:58 - sqlalchemy.engine.Engine - INFO - [generated in 0.00147s] ('user@example.com', datetime.date(2000, 1, 1), '$2b$12$KoIXUQvrOXbBNyF.HAR..uwwfhpvRKHLRJ/6zBrjRkLs9bmVxIlAK', 'Ándres', 'López Gómez', 'male', '300122344', None, datetime.datetime(2022, 8, 24, 13, 42, 52, 938247), datetime.datetime(2022, 8, 24, 13, 42, 52, 938257), False, False, None)
+24-Aug-22 13:42:58 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 13:42:58 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 13:42:58 - sqlalchemy.engine.Engine - INFO - SELECT "user".email, "user".birth_date, "user".hashed_password, "user".first_name, "user".last_name, "user".gender, "user".phone, "user".photo, "user".created_at, "user".updated_at, "user".is_super_user, "user".is_active, "user".verify_code 
+FROM "user" 
+WHERE "user".email = %s
+24-Aug-22 13:42:58 - sqlalchemy.engine.Engine - INFO - [generated in 0.00061s] ('user@example.com',)
+24-Aug-22 13:42:58 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+24-Aug-22 13:43:04 - uvicorn - INFO - routers: entry
+24-Aug-22 13:43:04 - uvicorn - INFO - endpoint: entry
+24-Aug-22 13:43:04 - uvicorn - INFO - crud: entry
+24-Aug-22 13:43:04 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 13:43:04 - sqlalchemy.engine.Engine - INFO - SELECT "user".email, "user".birth_date, "user".hashed_password, "user".first_name, "user".last_name, "user".gender, "user".phone, "user".photo, "user".created_at, "user".updated_at, "user".is_super_user, "user".is_active, "user".verify_code 
+FROM "user"
+24-Aug-22 13:43:04 - sqlalchemy.engine.Engine - INFO - [generated in 0.01455s] ()
+24-Aug-22 13:43:04 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+24-Aug-22 14:58:40 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 14:58:40 - uvicorn.error - INFO - Shutting down
+24-Aug-22 14:58:40 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 14:58:40 - uvicorn - INFO - Shutting down...
+24-Aug-22 14:58:40 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 14:58:40 - uvicorn.error - INFO - Finished server process [16]
+24-Aug-22 14:59:04 - uvicorn.error - WARNING - StatReload detected changes in 'docs/export_docs.py'. Reloading...
+24-Aug-22 14:59:05 - uvicorn.error - WARNING - StatReload detected changes in 'docs/export_docs.py'. Reloading...
+24-Aug-22 14:59:06 - uvicorn.error - INFO - Started server process [26]
+24-Aug-22 14:59:06 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 14:59:06 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 14:59:06 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 14:59:06 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 14:59:06 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 14:59:06 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 14:59:06 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 14:59:06 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 14:59:06 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 14:59:06 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 14:59:06 - sqlalchemy.engine.Engine - INFO - [generated in 0.00798s] ('user',)
+24-Aug-22 14:59:06 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 14:59:06 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 14:59:06 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 15:00:24 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+24-Aug-22 15:00:24 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+24-Aug-22 15:00:24 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+24-Aug-22 15:00:25 - uvicorn.error - INFO - Started server process [11]
+24-Aug-22 15:00:25 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 15:00:25 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 15:00:25 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 15:00:25 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:00:25 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 15:00:25 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:00:25 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 15:00:25 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:00:25 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 15:00:25 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 15:00:25 - sqlalchemy.engine.Engine - INFO - [generated in 0.00040s] ('user',)
+24-Aug-22 15:00:25 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 15:00:25 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 15:00:25 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 15:45:26 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 15:45:27 - uvicorn.error - INFO - Shutting down
+24-Aug-22 15:45:27 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 15:45:27 - uvicorn - INFO - Shutting down...
+24-Aug-22 15:45:27 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 15:45:27 - uvicorn.error - INFO - Finished server process [11]
+24-Aug-22 15:45:32 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 15:45:34 - uvicorn.error - INFO - Started server process [16]
+24-Aug-22 15:45:34 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 15:45:34 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 15:45:35 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 15:45:35 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:45:35 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 15:45:35 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:45:35 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 15:45:35 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:45:35 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 15:45:35 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 15:45:35 - sqlalchemy.engine.Engine - INFO - [generated in 0.00125s] ('user',)
+24-Aug-22 15:45:35 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 15:45:35 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 15:45:35 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 15:45:56 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/app/main.py", line 48, in add_order
+    await create_order.delay("name", 5)
+TypeError: object AsyncResult can't be used in 'await' expression
+24-Aug-22 15:47:17 - uvicorn.error - WARNING - StatReload detected changes in 'workers/tasks.py'. Reloading...
+24-Aug-22 15:47:17 - uvicorn.error - INFO - Shutting down
+24-Aug-22 15:47:17 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 15:47:17 - uvicorn - INFO - Shutting down...
+24-Aug-22 15:47:17 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 15:47:17 - uvicorn.error - INFO - Finished server process [16]
+24-Aug-22 15:47:20 - uvicorn.error - INFO - Started server process [20]
+24-Aug-22 15:47:20 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 15:47:20 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 15:47:20 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 15:47:20 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:47:20 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 15:47:20 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:47:20 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 15:47:20 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:47:20 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 15:47:20 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 15:47:20 - sqlalchemy.engine.Engine - INFO - [generated in 0.00080s] ('user',)
+24-Aug-22 15:47:20 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 15:47:20 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 15:47:20 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 15:47:23 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 15:47:23 - uvicorn.error - INFO - Shutting down
+24-Aug-22 15:47:23 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 15:47:23 - uvicorn - INFO - Shutting down...
+24-Aug-22 15:47:23 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 15:47:23 - uvicorn.error - INFO - Finished server process [20]
+24-Aug-22 15:47:25 - uvicorn.error - INFO - Started server process [24]
+24-Aug-22 15:47:25 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 15:47:25 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 15:47:25 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 15:47:25 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:47:25 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 15:47:25 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:47:25 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 15:47:25 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:47:25 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 15:47:25 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 15:47:25 - sqlalchemy.engine.Engine - INFO - [generated in 0.00048s] ('user',)
+24-Aug-22 15:47:25 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 15:47:25 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 15:47:25 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 15:47:46 - uvicorn.error - WARNING - StatReload detected changes in 'workers/tasks.py'. Reloading...
+24-Aug-22 15:47:46 - uvicorn.error - INFO - Shutting down
+24-Aug-22 15:47:46 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 15:47:46 - uvicorn - INFO - Shutting down...
+24-Aug-22 15:47:46 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 15:47:46 - uvicorn.error - INFO - Finished server process [24]
+24-Aug-22 15:47:48 - uvicorn.error - INFO - Started server process [28]
+24-Aug-22 15:47:48 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 15:47:48 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 15:47:48 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 15:47:48 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:47:48 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 15:47:48 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:47:48 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 15:47:48 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:47:48 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 15:47:49 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 15:47:49 - sqlalchemy.engine.Engine - INFO - [generated in 0.00033s] ('user',)
+24-Aug-22 15:47:49 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 15:47:49 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 15:47:49 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 15:48:06 - uvicorn.error - WARNING - StatReload detected changes in 'workers/tasks.py'. Reloading...
+24-Aug-22 15:48:06 - uvicorn.error - INFO - Shutting down
+24-Aug-22 15:48:06 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 15:48:06 - uvicorn - INFO - Shutting down...
+24-Aug-22 15:48:06 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 15:48:06 - uvicorn.error - INFO - Finished server process [28]
+24-Aug-22 15:48:09 - uvicorn.error - INFO - Started server process [32]
+24-Aug-22 15:48:09 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 15:48:09 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 15:48:09 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 15:48:09 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:48:09 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 15:48:09 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:48:09 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 15:48:09 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:48:09 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 15:48:09 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 15:48:09 - sqlalchemy.engine.Engine - INFO - [generated in 0.00186s] ('user',)
+24-Aug-22 15:48:09 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 15:48:09 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 15:48:09 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 15:48:15 - uvicorn.error - WARNING - StatReload detected changes in 'workers/tasks.py'. Reloading...
+24-Aug-22 15:48:15 - uvicorn.error - INFO - Shutting down
+24-Aug-22 15:48:15 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 15:48:15 - uvicorn - INFO - Shutting down...
+24-Aug-22 15:48:15 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 15:48:15 - uvicorn.error - INFO - Finished server process [32]
+24-Aug-22 15:48:17 - uvicorn.error - INFO - Started server process [36]
+24-Aug-22 15:48:17 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 15:48:17 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 15:48:17 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 15:48:17 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:48:17 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 15:48:17 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:48:17 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 15:48:17 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:48:17 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 15:48:17 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 15:48:17 - sqlalchemy.engine.Engine - INFO - [generated in 0.00049s] ('user',)
+24-Aug-22 15:48:17 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 15:48:17 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 15:48:17 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 15:48:18 - uvicorn.error - WARNING - StatReload detected changes in 'workers/tasks.py'. Reloading...
+24-Aug-22 15:48:18 - uvicorn.error - INFO - Shutting down
+24-Aug-22 15:48:18 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 15:48:18 - uvicorn - INFO - Shutting down...
+24-Aug-22 15:48:18 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 15:48:18 - uvicorn.error - INFO - Finished server process [36]
+24-Aug-22 15:48:20 - uvicorn.error - INFO - Started server process [40]
+24-Aug-22 15:48:20 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 15:48:20 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 15:48:21 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 15:48:21 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:48:21 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 15:48:21 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:48:21 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 15:48:21 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:48:21 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 15:48:21 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 15:48:21 - sqlalchemy.engine.Engine - INFO - [generated in 0.00035s] ('user',)
+24-Aug-22 15:48:21 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 15:48:21 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 15:48:21 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 15:48:21 - uvicorn.error - WARNING - StatReload detected changes in 'workers/tasks.py'. Reloading...
+24-Aug-22 15:48:21 - uvicorn.error - INFO - Shutting down
+24-Aug-22 15:48:21 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 15:48:21 - uvicorn - INFO - Shutting down...
+24-Aug-22 15:48:21 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 15:48:21 - uvicorn.error - INFO - Finished server process [40]
+24-Aug-22 15:48:23 - uvicorn.error - INFO - Started server process [44]
+24-Aug-22 15:48:23 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 15:48:23 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 15:48:23 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 15:48:23 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:48:23 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 15:48:23 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:48:23 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 15:48:23 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:48:23 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 15:48:23 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 15:48:23 - sqlalchemy.engine.Engine - INFO - [generated in 0.00041s] ('user',)
+24-Aug-22 15:48:23 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 15:48:23 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 15:48:23 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 15:52:36 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+24-Aug-22 15:52:36 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+24-Aug-22 15:52:36 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+24-Aug-22 15:52:37 - uvicorn.error - INFO - Started server process [11]
+24-Aug-22 15:52:37 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 15:52:37 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - [generated in 0.00061s] ('user',)
+24-Aug-22 15:52:37 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 15:52:37 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 15:52:37 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:38:22 - uvicorn.error - WARNING - StatReload detected changes in 'workers/tasks.py'. Reloading...
+24-Aug-22 16:38:22 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:38:22 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:38:22 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:38:22 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:38:22 - uvicorn.error - INFO - Finished server process [11]
+24-Aug-22 16:38:26 - uvicorn.error - INFO - Started server process [15]
+24-Aug-22 16:38:26 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:38:26 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:38:26 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:38:26 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:38:26 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:38:26 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:38:26 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:38:26 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:38:26 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:38:26 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:38:26 - sqlalchemy.engine.Engine - INFO - [generated in 0.00038s] ('user',)
+24-Aug-22 16:38:26 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:38:26 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:38:26 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:38:26 - uvicorn.error - WARNING - StatReload detected changes in 'workers/tasks.py'. Reloading...
+24-Aug-22 16:38:26 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:38:27 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:38:27 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:38:27 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:38:27 - uvicorn.error - INFO - Finished server process [15]
+24-Aug-22 16:38:29 - uvicorn.error - INFO - Started server process [19]
+24-Aug-22 16:38:29 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:38:29 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:38:29 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:38:29 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:38:29 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:38:29 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:38:29 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:38:29 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:38:29 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:38:29 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:38:29 - sqlalchemy.engine.Engine - INFO - [generated in 0.00080s] ('user',)
+24-Aug-22 16:38:29 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:38:29 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:38:29 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:38:34 - uvicorn.error - WARNING - StatReload detected changes in 'workers/tasks.py'. Reloading...
+24-Aug-22 16:38:34 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:38:34 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:38:34 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:38:34 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:38:34 - uvicorn.error - INFO - Finished server process [19]
+24-Aug-22 16:38:35 - uvicorn.error - INFO - Started server process [23]
+24-Aug-22 16:38:35 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:38:35 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:38:35 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:38:35 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:38:35 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:38:35 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:38:35 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:38:35 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:38:35 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:38:35 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:38:35 - sqlalchemy.engine.Engine - INFO - [generated in 0.00080s] ('user',)
+24-Aug-22 16:38:35 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:38:35 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:38:35 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:38:44 - uvicorn.error - WARNING - StatReload detected changes in 'workers/tasks.py'. Reloading...
+24-Aug-22 16:38:44 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:38:44 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:38:44 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:38:44 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:38:44 - uvicorn.error - INFO - Finished server process [23]
+24-Aug-22 16:38:47 - uvicorn.error - INFO - Started server process [27]
+24-Aug-22 16:38:47 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:38:47 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:38:47 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:38:47 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:38:47 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:38:47 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:38:47 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:38:47 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:38:47 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:38:47 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:38:47 - sqlalchemy.engine.Engine - INFO - [generated in 0.00069s] ('user',)
+24-Aug-22 16:38:47 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:38:47 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:38:47 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:38:48 - uvicorn.error - WARNING - StatReload detected changes in 'workers/tasks.py'. Reloading...
+24-Aug-22 16:38:48 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:38:49 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:38:49 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:38:49 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:38:49 - uvicorn.error - INFO - Finished server process [27]
+24-Aug-22 16:38:50 - uvicorn.error - WARNING - StatReload detected changes in 'workers/tasks.py'. Reloading...
+24-Aug-22 16:38:53 - uvicorn.error - INFO - Started server process [33]
+24-Aug-22 16:38:53 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:38:53 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:38:53 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:38:53 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:38:53 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:38:53 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:38:53 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:38:53 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:38:53 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:38:53 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:38:53 - sqlalchemy.engine.Engine - INFO - [generated in 0.00054s] ('user',)
+24-Aug-22 16:38:53 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:38:53 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:38:53 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:38:59 - uvicorn.error - WARNING - StatReload detected changes in 'workers/tasks.py'. Reloading...
+24-Aug-22 16:38:59 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:38:59 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:38:59 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:38:59 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:38:59 - uvicorn.error - INFO - Finished server process [33]
+24-Aug-22 16:39:01 - uvicorn.error - INFO - Started server process [37]
+24-Aug-22 16:39:01 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:39:01 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:39:01 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:39:01 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:39:01 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:39:01 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:39:01 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:39:01 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:39:01 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:39:01 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:39:01 - sqlalchemy.engine.Engine - INFO - [generated in 0.00076s] ('user',)
+24-Aug-22 16:39:01 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:39:01 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:39:01 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:39:37 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:39:37 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:39:37 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:39:37 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:39:37 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:39:37 - uvicorn.error - INFO - Finished server process [37]
+24-Aug-22 16:39:39 - uvicorn.error - INFO - Started server process [41]
+24-Aug-22 16:39:39 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:39:39 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:39:40 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:39:40 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:39:40 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:39:40 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:39:40 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:39:40 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:39:40 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:39:40 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:39:40 - sqlalchemy.engine.Engine - INFO - [generated in 0.00032s] ('user',)
+24-Aug-22 16:39:40 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:39:40 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:39:40 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:39:42 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:39:42 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:39:42 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:39:42 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:39:42 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:39:42 - uvicorn.error - INFO - Finished server process [41]
+24-Aug-22 16:39:43 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:39:45 - uvicorn.error - INFO - Started server process [47]
+24-Aug-22 16:39:45 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:39:45 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:39:45 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:39:45 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:39:45 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:39:45 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:39:45 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:39:45 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:39:45 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:39:45 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:39:45 - sqlalchemy.engine.Engine - INFO - [generated in 0.00044s] ('user',)
+24-Aug-22 16:39:45 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:39:45 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:39:45 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:39:47 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:39:47 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:39:47 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:39:47 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:39:47 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:39:47 - uvicorn.error - INFO - Finished server process [47]
+24-Aug-22 16:39:51 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:39:54 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:39:57 - uvicorn.error - INFO - Started server process [53]
+24-Aug-22 16:39:57 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:39:57 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:39:57 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:39:57 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:39:57 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:39:57 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:39:57 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:39:57 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:39:57 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:39:57 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:39:57 - sqlalchemy.engine.Engine - INFO - [generated in 0.00430s] ('user',)
+24-Aug-22 16:39:57 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:39:57 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:39:57 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:39:59 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:39:59 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:39:59 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:39:59 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:39:59 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:39:59 - uvicorn.error - INFO - Finished server process [53]
+24-Aug-22 16:40:01 - uvicorn.error - INFO - Started server process [57]
+24-Aug-22 16:40:01 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:40:01 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:40:01 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:40:01 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:40:01 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:40:01 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:40:01 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:40:01 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:40:01 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:40:01 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:40:01 - sqlalchemy.engine.Engine - INFO - [generated in 0.00038s] ('user',)
+24-Aug-22 16:40:01 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:40:01 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:40:01 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:42:26 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:42:26 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:42:26 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:42:26 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:42:26 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:42:26 - uvicorn.error - INFO - Finished server process [57]
+24-Aug-22 16:42:29 - uvicorn.error - INFO - Started server process [61]
+24-Aug-22 16:42:29 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:42:29 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:42:29 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:42:29 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:42:29 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:42:29 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:42:29 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:42:29 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:42:29 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:42:29 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:42:29 - sqlalchemy.engine.Engine - INFO - [generated in 0.00032s] ('user',)
+24-Aug-22 16:42:29 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:42:29 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:42:29 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:42:29 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:42:29 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:42:29 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:42:29 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:42:29 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:42:29 - uvicorn.error - INFO - Finished server process [61]
+24-Aug-22 16:42:31 - uvicorn.error - INFO - Started server process [65]
+24-Aug-22 16:42:31 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:42:31 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:42:31 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:42:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:42:31 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:42:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:42:31 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:42:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:42:31 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:42:31 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:42:31 - sqlalchemy.engine.Engine - INFO - [generated in 0.00033s] ('user',)
+24-Aug-22 16:42:31 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:42:31 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:42:31 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:42:42 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:42:42 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:42:42 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:42:42 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:42:42 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:42:42 - uvicorn.error - INFO - Finished server process [65]
+24-Aug-22 16:42:43 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:42:53 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:42:54 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:42:58 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:43:01 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:43:03 - uvicorn.error - INFO - Started server process [76]
+24-Aug-22 16:43:03 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:43:03 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:43:03 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:43:03 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:43:03 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:43:03 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:43:03 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:43:03 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:43:03 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:43:03 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:43:03 - sqlalchemy.engine.Engine - INFO - [generated in 0.00041s] ('user',)
+24-Aug-22 16:43:03 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:43:03 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:43:03 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:43:36 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:43:36 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:43:36 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:43:36 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:43:36 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:43:36 - uvicorn.error - INFO - Finished server process [76]
+24-Aug-22 16:43:38 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:43:40 - uvicorn.error - INFO - Started server process [82]
+24-Aug-22 16:43:40 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:43:40 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:43:40 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:43:40 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:43:40 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:43:40 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:43:40 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:43:40 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:43:40 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:43:40 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:43:40 - sqlalchemy.engine.Engine - INFO - [generated in 0.00040s] ('user',)
+24-Aug-22 16:43:40 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:43:40 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:43:40 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:43:44 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:43:44 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:43:44 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:43:44 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:43:44 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:43:44 - uvicorn.error - INFO - Finished server process [82]
+24-Aug-22 16:43:46 - uvicorn.error - INFO - Started server process [86]
+24-Aug-22 16:43:46 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:43:46 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:43:46 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:43:46 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:43:46 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:43:46 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:43:46 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:43:46 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:43:46 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:43:46 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:43:46 - sqlalchemy.engine.Engine - INFO - [generated in 0.00065s] ('user',)
+24-Aug-22 16:43:46 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:43:46 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:43:46 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:43:48 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:43:48 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:43:48 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:43:48 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:43:48 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:43:48 - uvicorn.error - INFO - Finished server process [86]
+24-Aug-22 16:43:50 - uvicorn.error - INFO - Started server process [90]
+24-Aug-22 16:43:50 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:43:50 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:43:50 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:43:50 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:43:50 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:43:50 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:43:50 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:43:50 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:43:50 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:43:50 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:43:50 - sqlalchemy.engine.Engine - INFO - [generated in 0.00044s] ('user',)
+24-Aug-22 16:43:50 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:43:50 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:43:50 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:44:09 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/usr/local/lib/python3.8/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/usr/local/lib/python3.8/site-packages/anyio/to_thread.py", line 31, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+  File "/usr/local/lib/python3.8/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/usr/local/lib/python3.8/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/app/main.py", line 60, in add_order2
+    "task_status": task_result.status,
+  File "/usr/local/lib/python3.8/site-packages/celery/result.py", line 478, in state
+    return self._get_task_meta()['status']
+  File "/usr/local/lib/python3.8/site-packages/celery/result.py", line 417, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+  File "/usr/local/lib/python3.8/site-packages/celery/backends/base.py", line 609, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'
+24-Aug-22 16:45:14 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/usr/local/lib/python3.8/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/usr/local/lib/python3.8/site-packages/anyio/to_thread.py", line 31, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+  File "/usr/local/lib/python3.8/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/usr/local/lib/python3.8/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/app/main.py", line 60, in add_order2
+    "task_status": task_result.status,
+  File "/usr/local/lib/python3.8/site-packages/celery/result.py", line 478, in state
+    return self._get_task_meta()['status']
+  File "/usr/local/lib/python3.8/site-packages/celery/result.py", line 417, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+  File "/usr/local/lib/python3.8/site-packages/celery/backends/base.py", line 609, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'
+24-Aug-22 16:45:51 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:45:51 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:45:51 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:45:51 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:45:51 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:45:52 - uvicorn.error - INFO - Finished server process [90]
+24-Aug-22 16:45:54 - uvicorn.error - INFO - Started server process [95]
+24-Aug-22 16:45:54 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:45:54 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:45:54 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:45:54 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:45:54 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:45:54 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:45:54 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:45:54 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:45:54 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:45:54 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:45:54 - sqlalchemy.engine.Engine - INFO - [generated in 0.00500s] ('user',)
+24-Aug-22 16:45:54 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:45:54 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:45:54 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:45:55 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 142, in jsonable_encoder
+    data = dict(obj)
+TypeError: '_thread.lock' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 146, in jsonable_encoder
+    data = vars(obj)
+TypeError: vars() argument must have __dict__ attribute
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 245, in app
+    content = await serialize_response(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 149, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 150, in jsonable_encoder
+    return jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 106, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 150, in jsonable_encoder
+    return jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 106, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 150, in jsonable_encoder
+    return jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 106, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 149, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [TypeError("'_thread.lock' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+24-Aug-22 16:46:17 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:46:17 - uvicorn.error - INFO - Shutting down
+24-Aug-22 16:46:18 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 16:46:18 - uvicorn - INFO - Shutting down...
+24-Aug-22 16:46:18 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 16:46:18 - uvicorn.error - INFO - Finished server process [95]
+24-Aug-22 16:46:20 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+24-Aug-22 16:46:22 - uvicorn.error - INFO - Started server process [101]
+24-Aug-22 16:46:22 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 16:46:22 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 16:46:23 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 16:46:23 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:46:23 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 16:46:23 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:46:23 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 16:46:23 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 16:46:23 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 16:46:23 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 16:46:23 - sqlalchemy.engine.Engine - INFO - [generated in 0.00106s] ('user',)
+24-Aug-22 16:46:23 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 16:46:23 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 16:46:23 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 16:46:24 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 142, in jsonable_encoder
+    data = dict(obj)
+TypeError: '_thread.lock' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 146, in jsonable_encoder
+    data = vars(obj)
+TypeError: vars() argument must have __dict__ attribute
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 245, in app
+    content = await serialize_response(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 149, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 106, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 150, in jsonable_encoder
+    return jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 106, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 150, in jsonable_encoder
+    return jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 106, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 150, in jsonable_encoder
+    return jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 106, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 149, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [TypeError("'_thread.lock' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+24-Aug-22 17:07:53 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+24-Aug-22 17:07:53 - uvicorn.error - INFO - Shutting down
+24-Aug-22 17:07:53 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 17:07:53 - uvicorn - INFO - Shutting down...
+24-Aug-22 17:07:53 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 17:07:53 - uvicorn.error - INFO - Finished server process [101]
+24-Aug-22 17:07:56 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+24-Aug-22 17:07:58 - uvicorn.error - INFO - Started server process [109]
+24-Aug-22 17:07:58 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 17:07:58 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 17:07:58 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 17:07:58 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 17:07:58 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 17:07:58 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 17:07:58 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 17:07:58 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 17:07:58 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 17:07:58 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 17:07:58 - sqlalchemy.engine.Engine - INFO - [generated in 0.00093s] ('user',)
+24-Aug-22 17:07:58 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 17:07:58 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 17:07:58 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 17:08:37 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+24-Aug-22 17:08:37 - uvicorn.error - INFO - Shutting down
+24-Aug-22 17:08:37 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 17:08:37 - uvicorn - INFO - Shutting down...
+24-Aug-22 17:08:37 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 17:08:37 - uvicorn.error - INFO - Finished server process [109]
+24-Aug-22 17:08:39 - uvicorn.error - INFO - Started server process [113]
+24-Aug-22 17:08:39 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 17:08:39 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 17:08:39 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 17:08:39 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 17:08:39 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 17:08:39 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 17:08:39 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 17:08:39 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 17:08:39 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 17:08:39 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 17:08:39 - sqlalchemy.engine.Engine - INFO - [generated in 0.00098s] ('user',)
+24-Aug-22 17:08:39 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 17:08:39 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 17:08:39 - uvicorn.error - INFO - Application startup complete.
+24-Aug-22 17:08:57 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+24-Aug-22 17:08:57 - uvicorn.error - INFO - Shutting down
+24-Aug-22 17:08:57 - uvicorn.error - INFO - Waiting for application shutdown.
+24-Aug-22 17:08:57 - uvicorn - INFO - Shutting down...
+24-Aug-22 17:08:57 - uvicorn.error - INFO - Application shutdown complete.
+24-Aug-22 17:08:57 - uvicorn.error - INFO - Finished server process [113]
+24-Aug-22 17:08:59 - uvicorn.error - INFO - Started server process [117]
+24-Aug-22 17:08:59 - uvicorn.error - INFO - Waiting for application startup.
+24-Aug-22 17:08:59 - uvicorn - INFO - INIT: ___Starting up___
+24-Aug-22 17:08:59 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+24-Aug-22 17:08:59 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 17:08:59 - sqlalchemy.engine.Engine - INFO - select current_schema()
+24-Aug-22 17:08:59 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 17:08:59 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+24-Aug-22 17:08:59 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+24-Aug-22 17:08:59 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+24-Aug-22 17:08:59 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+24-Aug-22 17:08:59 - sqlalchemy.engine.Engine - INFO - [generated in 0.00072s] ('user',)
+24-Aug-22 17:08:59 - sqlalchemy.engine.Engine - INFO - COMMIT
+24-Aug-22 17:08:59 - uvicorn - INFO - INIT: ___end___
+24-Aug-22 17:08:59 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 20:18:37 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+25-Aug-22 20:18:37 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+25-Aug-22 20:18:37 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+25-Aug-22 20:18:39 - uvicorn.error - INFO - Started server process [11]
+25-Aug-22 20:18:39 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 20:18:39 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 20:18:39 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 20:18:39 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 20:18:39 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 20:18:39 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 20:18:39 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 20:18:39 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 20:18:39 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 20:18:39 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 20:18:39 - sqlalchemy.engine.Engine - INFO - [generated in 0.00161s] ('user',)
+25-Aug-22 20:18:39 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 20:18:39 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 20:18:39 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 20:20:41 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+25-Aug-22 20:20:41 - uvicorn.error - INFO - Shutting down
+25-Aug-22 20:20:41 - uvicorn.error - INFO - Waiting for application shutdown.
+25-Aug-22 20:20:41 - uvicorn - INFO - Shutting down...
+25-Aug-22 20:20:41 - uvicorn.error - INFO - Application shutdown complete.
+25-Aug-22 20:20:41 - uvicorn.error - INFO - Finished server process [11]
+25-Aug-22 20:20:44 - uvicorn.error - INFO - Started server process [15]
+25-Aug-22 20:20:44 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 20:20:44 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 20:20:44 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 20:20:44 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 20:20:44 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 20:20:44 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 20:20:44 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 20:20:44 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 20:20:44 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 20:20:44 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 20:20:44 - sqlalchemy.engine.Engine - INFO - [generated in 0.00165s] ('user',)
+25-Aug-22 20:20:44 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 20:20:44 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 20:20:44 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 20:21:06 - uvicorn.error - WARNING - StatReload detected changes in 'main.py'. Reloading...
+25-Aug-22 20:21:07 - uvicorn.error - INFO - Shutting down
+25-Aug-22 20:21:07 - uvicorn.error - INFO - Waiting for application shutdown.
+25-Aug-22 20:21:07 - uvicorn - INFO - Shutting down...
+25-Aug-22 20:21:07 - uvicorn.error - INFO - Application shutdown complete.
+25-Aug-22 20:21:07 - uvicorn.error - INFO - Finished server process [15]
+25-Aug-22 20:21:09 - uvicorn.error - INFO - Started server process [19]
+25-Aug-22 20:21:09 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 20:21:09 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 20:21:09 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 20:21:09 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 20:21:09 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 20:21:09 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 20:21:09 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 20:21:09 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 20:21:09 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 20:21:09 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 20:21:09 - sqlalchemy.engine.Engine - INFO - [generated in 0.00052s] ('user',)
+25-Aug-22 20:21:09 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 20:21:09 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 20:21:09 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 21:00:16 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:00:16 - uvicorn.error - INFO - Shutting down
+25-Aug-22 21:00:16 - uvicorn.error - INFO - Waiting for application shutdown.
+25-Aug-22 21:00:16 - uvicorn - INFO - Shutting down...
+25-Aug-22 21:00:16 - uvicorn.error - INFO - Application shutdown complete.
+25-Aug-22 21:00:16 - uvicorn.error - INFO - Finished server process [19]
+25-Aug-22 21:00:19 - uvicorn.error - INFO - Started server process [23]
+25-Aug-22 21:00:19 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 21:00:19 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 21:00:19 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 21:00:19 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:00:19 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 21:00:19 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:00:19 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 21:00:19 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:00:19 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 21:00:19 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 21:00:19 - sqlalchemy.engine.Engine - INFO - [generated in 0.00058s] ('user',)
+25-Aug-22 21:00:19 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 21:00:19 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 21:00:19 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 21:08:32 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:08:32 - uvicorn.error - INFO - Shutting down
+25-Aug-22 21:08:32 - uvicorn.error - INFO - Waiting for application shutdown.
+25-Aug-22 21:08:32 - uvicorn - INFO - Shutting down...
+25-Aug-22 21:08:32 - uvicorn.error - INFO - Application shutdown complete.
+25-Aug-22 21:08:32 - uvicorn.error - INFO - Finished server process [23]
+25-Aug-22 21:08:40 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:08:42 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:08:44 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:08:46 - uvicorn.error - INFO - Started server process [35]
+25-Aug-22 21:08:46 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 21:08:46 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 21:08:46 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 21:08:46 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:08:46 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 21:08:46 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:08:46 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 21:08:46 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:08:46 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 21:08:46 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 21:08:46 - sqlalchemy.engine.Engine - INFO - [generated in 0.00041s] ('user',)
+25-Aug-22 21:08:46 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 21:08:46 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 21:08:46 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 21:18:52 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:18:52 - uvicorn.error - INFO - Shutting down
+25-Aug-22 21:18:52 - uvicorn.error - INFO - Waiting for application shutdown.
+25-Aug-22 21:18:52 - uvicorn - INFO - Shutting down...
+25-Aug-22 21:18:52 - uvicorn.error - INFO - Application shutdown complete.
+25-Aug-22 21:18:52 - uvicorn.error - INFO - Finished server process [35]
+25-Aug-22 21:18:54 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:18:55 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:18:57 - uvicorn.error - INFO - Started server process [43]
+25-Aug-22 21:18:57 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 21:18:57 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 21:18:57 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 21:18:57 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:18:57 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 21:18:57 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:18:57 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 21:18:57 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:18:57 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 21:18:57 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 21:18:57 - sqlalchemy.engine.Engine - INFO - [generated in 0.00143s] ('user',)
+25-Aug-22 21:18:57 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 21:18:57 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 21:18:57 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 21:30:24 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:30:24 - uvicorn.error - INFO - Shutting down
+25-Aug-22 21:30:24 - uvicorn.error - INFO - Waiting for application shutdown.
+25-Aug-22 21:30:24 - uvicorn - INFO - Shutting down...
+25-Aug-22 21:30:24 - uvicorn.error - INFO - Application shutdown complete.
+25-Aug-22 21:30:24 - uvicorn.error - INFO - Finished server process [43]
+25-Aug-22 21:30:35 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:30:37 - uvicorn.error - INFO - Started server process [50]
+25-Aug-22 21:30:37 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 21:30:37 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 21:30:37 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 21:30:37 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:30:37 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 21:30:37 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:30:37 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 21:30:37 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:30:37 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 21:30:37 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 21:30:37 - sqlalchemy.engine.Engine - INFO - [generated in 0.00108s] ('user',)
+25-Aug-22 21:30:37 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 21:30:37 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 21:30:37 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 21:45:52 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:45:52 - uvicorn.error - INFO - Shutting down
+25-Aug-22 21:45:52 - uvicorn.error - INFO - Waiting for application shutdown.
+25-Aug-22 21:45:52 - uvicorn - INFO - Shutting down...
+25-Aug-22 21:45:52 - uvicorn.error - INFO - Application shutdown complete.
+25-Aug-22 21:45:52 - uvicorn.error - INFO - Finished server process [50]
+25-Aug-22 21:45:54 - uvicorn.error - INFO - Started server process [54]
+25-Aug-22 21:45:54 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 21:45:54 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 21:45:54 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 21:45:54 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:45:54 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 21:45:54 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:45:54 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 21:45:54 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:45:54 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 21:45:54 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 21:45:54 - sqlalchemy.engine.Engine - INFO - [generated in 0.00054s] ('user',)
+25-Aug-22 21:45:54 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 21:45:54 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 21:45:54 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 21:46:06 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:46:06 - uvicorn.error - INFO - Shutting down
+25-Aug-22 21:46:06 - uvicorn.error - INFO - Waiting for application shutdown.
+25-Aug-22 21:46:06 - uvicorn - INFO - Shutting down...
+25-Aug-22 21:46:06 - uvicorn.error - INFO - Application shutdown complete.
+25-Aug-22 21:46:06 - uvicorn.error - INFO - Finished server process [54]
+25-Aug-22 21:46:08 - uvicorn.error - INFO - Started server process [58]
+25-Aug-22 21:46:08 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 21:46:08 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 21:46:08 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 21:46:08 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:08 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 21:46:08 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:08 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 21:46:08 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:08 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 21:46:08 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 21:46:08 - sqlalchemy.engine.Engine - INFO - [generated in 0.00072s] ('user',)
+25-Aug-22 21:46:08 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 21:46:08 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 21:46:08 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 21:46:19 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:46:19 - uvicorn.error - INFO - Shutting down
+25-Aug-22 21:46:19 - uvicorn.error - INFO - Waiting for application shutdown.
+25-Aug-22 21:46:19 - uvicorn - INFO - Shutting down...
+25-Aug-22 21:46:19 - uvicorn.error - INFO - Application shutdown complete.
+25-Aug-22 21:46:19 - uvicorn.error - INFO - Finished server process [58]
+25-Aug-22 21:46:20 - uvicorn.error - INFO - Started server process [62]
+25-Aug-22 21:46:20 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 21:46:20 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 21:46:20 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 21:46:20 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:20 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 21:46:20 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:20 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 21:46:20 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:20 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 21:46:20 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 21:46:20 - sqlalchemy.engine.Engine - INFO - [generated in 0.00066s] ('user',)
+25-Aug-22 21:46:20 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 21:46:20 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 21:46:20 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 21:46:22 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:46:22 - uvicorn.error - INFO - Shutting down
+25-Aug-22 21:46:22 - uvicorn.error - INFO - Waiting for application shutdown.
+25-Aug-22 21:46:22 - uvicorn - INFO - Shutting down...
+25-Aug-22 21:46:22 - uvicorn.error - INFO - Application shutdown complete.
+25-Aug-22 21:46:22 - uvicorn.error - INFO - Finished server process [62]
+25-Aug-22 21:46:24 - uvicorn.error - INFO - Started server process [66]
+25-Aug-22 21:46:24 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 21:46:24 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 21:46:24 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 21:46:24 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:24 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 21:46:24 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:24 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 21:46:24 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:24 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 21:46:24 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 21:46:24 - sqlalchemy.engine.Engine - INFO - [generated in 0.00038s] ('user',)
+25-Aug-22 21:46:24 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 21:46:24 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 21:46:24 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 21:46:26 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:46:26 - uvicorn.error - INFO - Shutting down
+25-Aug-22 21:46:26 - uvicorn.error - INFO - Waiting for application shutdown.
+25-Aug-22 21:46:26 - uvicorn - INFO - Shutting down...
+25-Aug-22 21:46:26 - uvicorn.error - INFO - Application shutdown complete.
+25-Aug-22 21:46:26 - uvicorn.error - INFO - Finished server process [66]
+25-Aug-22 21:46:28 - uvicorn.error - INFO - Started server process [70]
+25-Aug-22 21:46:28 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 21:46:28 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 21:46:28 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 21:46:28 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:28 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 21:46:28 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:28 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 21:46:28 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:28 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 21:46:28 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 21:46:28 - sqlalchemy.engine.Engine - INFO - [generated in 0.00042s] ('user',)
+25-Aug-22 21:46:28 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 21:46:28 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 21:46:28 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 21:46:29 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:46:29 - uvicorn.error - INFO - Shutting down
+25-Aug-22 21:46:29 - uvicorn.error - INFO - Waiting for application shutdown.
+25-Aug-22 21:46:29 - uvicorn - INFO - Shutting down...
+25-Aug-22 21:46:29 - uvicorn.error - INFO - Application shutdown complete.
+25-Aug-22 21:46:29 - uvicorn.error - INFO - Finished server process [70]
+25-Aug-22 21:46:30 - uvicorn.error - INFO - Started server process [74]
+25-Aug-22 21:46:30 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 21:46:30 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 21:46:31 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 21:46:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:31 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 21:46:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:31 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 21:46:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:31 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 21:46:31 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 21:46:31 - sqlalchemy.engine.Engine - INFO - [generated in 0.00067s] ('user',)
+25-Aug-22 21:46:31 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 21:46:31 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 21:46:31 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 21:46:34 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:46:34 - uvicorn.error - INFO - Shutting down
+25-Aug-22 21:46:34 - uvicorn.error - INFO - Waiting for application shutdown.
+25-Aug-22 21:46:34 - uvicorn - INFO - Shutting down...
+25-Aug-22 21:46:34 - uvicorn.error - INFO - Application shutdown complete.
+25-Aug-22 21:46:34 - uvicorn.error - INFO - Finished server process [74]
+25-Aug-22 21:46:35 - uvicorn.error - INFO - Started server process [78]
+25-Aug-22 21:46:35 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 21:46:35 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 21:46:35 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 21:46:35 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:35 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 21:46:35 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:35 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 21:46:35 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:35 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 21:46:35 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 21:46:35 - sqlalchemy.engine.Engine - INFO - [generated in 0.00048s] ('user',)
+25-Aug-22 21:46:35 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 21:46:35 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 21:46:35 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 21:46:45 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:46:45 - uvicorn.error - INFO - Shutting down
+25-Aug-22 21:46:45 - uvicorn.error - INFO - Waiting for application shutdown.
+25-Aug-22 21:46:45 - uvicorn - INFO - Shutting down...
+25-Aug-22 21:46:45 - uvicorn.error - INFO - Application shutdown complete.
+25-Aug-22 21:46:45 - uvicorn.error - INFO - Finished server process [78]
+25-Aug-22 21:46:47 - uvicorn.error - INFO - Started server process [82]
+25-Aug-22 21:46:47 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 21:46:47 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 21:46:47 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 21:46:47 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:47 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 21:46:47 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:47 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 21:46:47 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:47 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 21:46:47 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 21:46:47 - sqlalchemy.engine.Engine - INFO - [generated in 0.00056s] ('user',)
+25-Aug-22 21:46:47 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 21:46:47 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 21:46:47 - uvicorn.error - INFO - Application startup complete.
+25-Aug-22 21:46:48 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+25-Aug-22 21:46:48 - uvicorn.error - INFO - Shutting down
+25-Aug-22 21:46:48 - uvicorn.error - INFO - Waiting for application shutdown.
+25-Aug-22 21:46:48 - uvicorn - INFO - Shutting down...
+25-Aug-22 21:46:48 - uvicorn.error - INFO - Application shutdown complete.
+25-Aug-22 21:46:48 - uvicorn.error - INFO - Finished server process [82]
+25-Aug-22 21:46:49 - uvicorn.error - INFO - Started server process [86]
+25-Aug-22 21:46:49 - uvicorn.error - INFO - Waiting for application startup.
+25-Aug-22 21:46:49 - uvicorn - INFO - INIT: ___Starting up___
+25-Aug-22 21:46:50 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+25-Aug-22 21:46:50 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:50 - sqlalchemy.engine.Engine - INFO - select current_schema()
+25-Aug-22 21:46:50 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:50 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+25-Aug-22 21:46:50 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+25-Aug-22 21:46:50 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+25-Aug-22 21:46:50 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+25-Aug-22 21:46:50 - sqlalchemy.engine.Engine - INFO - [generated in 0.00047s] ('user',)
+25-Aug-22 21:46:50 - sqlalchemy.engine.Engine - INFO - COMMIT
+25-Aug-22 21:46:50 - uvicorn - INFO - INIT: ___end___
+25-Aug-22 21:46:50 - uvicorn.error - INFO - Application startup complete.
+26-Aug-22 14:23:32 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+26-Aug-22 14:23:32 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+26-Aug-22 14:23:32 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+26-Aug-22 14:23:34 - uvicorn.error - INFO - Started server process [11]
+26-Aug-22 14:23:34 - uvicorn.error - INFO - Waiting for application startup.
+26-Aug-22 14:23:34 - uvicorn - INFO - INIT: ___Starting up___
+26-Aug-22 14:23:34 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+26-Aug-22 14:23:34 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 14:23:34 - sqlalchemy.engine.Engine - INFO - select current_schema()
+26-Aug-22 14:23:34 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 14:23:34 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+26-Aug-22 14:23:34 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 14:23:34 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+26-Aug-22 14:23:34 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+26-Aug-22 14:23:34 - sqlalchemy.engine.Engine - INFO - [generated in 0.00067s] ('user',)
+26-Aug-22 14:23:34 - sqlalchemy.engine.Engine - INFO - COMMIT
+26-Aug-22 14:23:34 - uvicorn - INFO - INIT: ___end___
+26-Aug-22 14:23:34 - uvicorn.error - INFO - Application startup complete.
+26-Aug-22 14:24:22 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+26-Aug-22 14:24:22 - sqlalchemy.engine.Engine - INFO - SELECT "user".email, "user".birth_date, "user".hashed_password, "user".first_name, "user".last_name, "user".gender, "user".phone, "user".id, "user".photo, "user".created_at, "user".updated_at, "user".is_super_user, "user".is_active, "user".verify_code 
+FROM "user" 
+WHERE "user".email = %s
+26-Aug-22 14:24:22 - sqlalchemy.engine.Engine - INFO - [generated in 0.00047s] ('user@example.com',)
+26-Aug-22 14:24:22 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+26-Aug-22 14:24:22 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 418, in _prepare_and_execute
+    prepared_stmt, attributes = await adapt_connection._prepare(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 660, in _prepare
+    prepared_stmt = await self._connection.prepare(operation)
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connection.py", line 566, in prepare
+    return await self._prepare(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connection.py", line 584, in _prepare
+    stmt = await self._get_statement(
+  File "/usr/local/lib/python3.8/site-packages/asyncpg/connection.py", line 398, in _get_statement
+    statement = await self._protocol.prepare(
+  File "asyncpg/protocol/protocol.pyx", line 168, in prepare
+asyncpg.exceptions.UndefinedColumnError: column user.id does not exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 479, in execute
+    self._adapt_connection.await_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 454, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 389, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 682, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.ProgrammingError: <class 'asyncpg.exceptions.UndefinedColumnError'>: column user.id does not exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/app/users/routers/usersRouters.py", line 53, in create_user
+    user_out = await create_user_db(user_in, session)
+  File "/app/users/endpoints/usersEndpoints.py", line 40, in create_user_db
+    user_exist = await userCrud.get_by_email(user.email, session)
+  File "/app/users/crud/userCrud.py", line 44, in get_by_email
+    user_query = await session.execute(query)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/ext/asyncio/session.py", line 215, in execute
+    result = await greenlet_spawn(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 126, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1705, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 333, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1572, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1943, in _execute_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2124, in _handle_dbapi_exception
+    util.raise_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 479, in execute
+    self._adapt_connection.await_(
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 68, in await_only
+    return current.driver.switch(awaitable)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 121, in greenlet_spawn
+    value = await result
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 454, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 389, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 682, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: column user.id does not exist
+[SQL: SELECT "user".email, "user".birth_date, "user".hashed_password, "user".first_name, "user".last_name, "user".gender, "user".phone, "user".id, "user".photo, "user".created_at, "user".updated_at, "user".is_super_user, "user".is_active, "user".verify_code 
+FROM "user" 
+WHERE "user".email = %s]
+[parameters: ('user@example.com',)]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+26-Aug-22 14:24:54 - uvicorn.error - WARNING - StatReload detected changes in 'db/databaseConfig.py'. Reloading...
+26-Aug-22 14:24:55 - uvicorn.error - INFO - Shutting down
+26-Aug-22 14:24:55 - uvicorn.error - INFO - Waiting for application shutdown.
+26-Aug-22 14:24:55 - uvicorn - INFO - Shutting down...
+26-Aug-22 14:24:55 - uvicorn.error - INFO - Application shutdown complete.
+26-Aug-22 14:24:55 - uvicorn.error - INFO - Finished server process [11]
+26-Aug-22 14:24:56 - uvicorn.error - INFO - Started server process [15]
+26-Aug-22 14:24:56 - uvicorn.error - INFO - Waiting for application startup.
+26-Aug-22 14:24:56 - uvicorn - INFO - INIT: ___Starting up___
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - select current_schema()
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - [generated in 0.00077s] ('user',)
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - 
+DROP TABLE "user"
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - [no key 0.00071s] ()
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - [cached since 0.03757s ago] ('user',)
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE "user" (
+	email VARCHAR NOT NULL, 
+	birth_date DATE, 
+	hashed_password VARCHAR(64), 
+	first_name VARCHAR(50), 
+	last_name VARCHAR(50), 
+	gender VARCHAR, 
+	phone VARCHAR, 
+	id UUID NOT NULL, 
+	photo VARCHAR, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	is_super_user BOOLEAN, 
+	is_active BOOLEAN, 
+	verify_code VARCHAR, 
+	PRIMARY KEY (id)
+)
+
+
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - [no key 0.00132s] ()
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - CREATE INDEX ix_user_id ON "user" (id)
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - [no key 0.00047s] ()
+26-Aug-22 14:24:57 - sqlalchemy.engine.Engine - INFO - COMMIT
+26-Aug-22 14:24:57 - uvicorn - INFO - INIT: ___end___
+26-Aug-22 14:24:57 - uvicorn.error - INFO - Application startup complete.
+26-Aug-22 14:25:14 - uvicorn.error - WARNING - StatReload detected changes in 'db/databaseConfig.py'. Reloading...
+26-Aug-22 14:25:14 - uvicorn.error - INFO - Shutting down
+26-Aug-22 14:25:14 - uvicorn.error - INFO - Waiting for application shutdown.
+26-Aug-22 14:25:14 - uvicorn - INFO - Shutting down...
+26-Aug-22 14:25:14 - uvicorn.error - INFO - Application shutdown complete.
+26-Aug-22 14:25:14 - uvicorn.error - INFO - Finished server process [15]
+26-Aug-22 14:25:16 - uvicorn.error - INFO - Started server process [19]
+26-Aug-22 14:25:16 - uvicorn.error - INFO - Waiting for application startup.
+26-Aug-22 14:25:16 - uvicorn - INFO - INIT: ___Starting up___
+26-Aug-22 14:25:16 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+26-Aug-22 14:25:16 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 14:25:16 - sqlalchemy.engine.Engine - INFO - select current_schema()
+26-Aug-22 14:25:16 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 14:25:16 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+26-Aug-22 14:25:16 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 14:25:16 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+26-Aug-22 14:25:16 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+26-Aug-22 14:25:17 - sqlalchemy.engine.Engine - INFO - [generated in 0.00490s] ('user',)
+26-Aug-22 14:25:17 - sqlalchemy.engine.Engine - INFO - COMMIT
+26-Aug-22 14:25:17 - uvicorn - INFO - INIT: ___end___
+26-Aug-22 14:25:17 - uvicorn.error - INFO - Application startup complete.
+26-Aug-22 14:25:20 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+26-Aug-22 14:25:20 - sqlalchemy.engine.Engine - INFO - SELECT "user".email, "user".birth_date, "user".hashed_password, "user".first_name, "user".last_name, "user".gender, "user".phone, "user".id, "user".photo, "user".created_at, "user".updated_at, "user".is_super_user, "user".is_active, "user".verify_code 
+FROM "user" 
+WHERE "user".email = %s
+26-Aug-22 14:25:20 - sqlalchemy.engine.Engine - INFO - [generated in 0.00085s] ('user@example.com',)
+26-Aug-22 14:25:20 - uvicorn - INFO - endpoint: entry
+26-Aug-22 14:25:20 - uvicorn - INFO - crud: entry
+26-Aug-22 14:25:20 - sqlalchemy.engine.Engine - INFO - INSERT INTO "user" (email, birth_date, hashed_password, first_name, last_name, gender, phone, id, photo, created_at, updated_at, is_super_user, is_active, verify_code) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+26-Aug-22 14:25:20 - sqlalchemy.engine.Engine - INFO - [generated in 0.00144s] ('user@example.com', datetime.date(2000, 1, 1), '$2b$12$hjQPzLzB4rCiREWUycvIFuhjI4LZ7tVWdbg20rrMxTsQX4bYqw7iW', 'Ándres', 'López Gómez', 'male', '300122344', UUID('c4019ded-290d-4449-b643-64d1b61edc41'), None, datetime.datetime(2022, 8, 26, 14, 25, 16, 172068), datetime.datetime(2022, 8, 26, 14, 25, 16, 172079), False, False, None)
+26-Aug-22 14:25:20 - sqlalchemy.engine.Engine - INFO - COMMIT
+26-Aug-22 14:25:20 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+26-Aug-22 14:25:20 - sqlalchemy.engine.Engine - INFO - SELECT "user".email, "user".birth_date, "user".hashed_password, "user".first_name, "user".last_name, "user".gender, "user".phone, "user".id, "user".photo, "user".created_at, "user".updated_at, "user".is_super_user, "user".is_active, "user".verify_code 
+FROM "user" 
+WHERE "user".id = %s
+26-Aug-22 14:25:20 - sqlalchemy.engine.Engine - INFO - [generated in 0.00082s] (UUID('c4019ded-290d-4449-b643-64d1b61edc41'),)
+26-Aug-22 14:25:20 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+26-Aug-22 14:25:45 - uvicorn - INFO - routers: entry
+26-Aug-22 14:25:45 - uvicorn - INFO - endpoint: entry
+26-Aug-22 14:25:45 - uvicorn - INFO - crud: entry
+26-Aug-22 14:25:45 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+26-Aug-22 14:25:45 - sqlalchemy.engine.Engine - INFO - SELECT "user".email, "user".birth_date, "user".hashed_password, "user".first_name, "user".last_name, "user".gender, "user".phone, "user".id, "user".photo, "user".created_at, "user".updated_at, "user".is_super_user, "user".is_active, "user".verify_code 
+FROM "user"
+26-Aug-22 14:25:45 - sqlalchemy.engine.Engine - INFO - [generated in 0.00066s] ()
+26-Aug-22 14:25:45 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+26-Aug-22 14:25:58 - uvicorn.error - WARNING - StatReload detected changes in 'users/routers/usersRouters.py'. Reloading...
+26-Aug-22 14:25:58 - uvicorn.error - INFO - Shutting down
+26-Aug-22 14:25:58 - uvicorn.error - INFO - Waiting for application shutdown.
+26-Aug-22 14:25:58 - uvicorn - INFO - Shutting down...
+26-Aug-22 14:25:58 - uvicorn.error - INFO - Application shutdown complete.
+26-Aug-22 14:25:58 - uvicorn.error - INFO - Finished server process [19]
+26-Aug-22 14:26:00 - uvicorn.error - INFO - Started server process [23]
+26-Aug-22 14:26:00 - uvicorn.error - INFO - Waiting for application startup.
+26-Aug-22 14:26:00 - uvicorn - INFO - INIT: ___Starting up___
+26-Aug-22 14:26:00 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+26-Aug-22 14:26:00 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 14:26:00 - sqlalchemy.engine.Engine - INFO - select current_schema()
+26-Aug-22 14:26:00 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 14:26:00 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+26-Aug-22 14:26:00 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 14:26:00 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+26-Aug-22 14:26:00 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+26-Aug-22 14:26:00 - sqlalchemy.engine.Engine - INFO - [generated in 0.00062s] ('user',)
+26-Aug-22 14:26:00 - sqlalchemy.engine.Engine - INFO - COMMIT
+26-Aug-22 14:26:00 - uvicorn - INFO - INIT: ___end___
+26-Aug-22 14:26:00 - uvicorn.error - INFO - Application startup complete.
+26-Aug-22 14:26:00 - uvicorn - INFO - routers: entry
+26-Aug-22 14:26:00 - uvicorn - INFO - endpoint: entry
+26-Aug-22 14:26:00 - uvicorn - INFO - crud: entry
+26-Aug-22 14:26:00 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+26-Aug-22 14:26:00 - sqlalchemy.engine.Engine - INFO - SELECT "user".email, "user".birth_date, "user".hashed_password, "user".first_name, "user".last_name, "user".gender, "user".phone, "user".id, "user".photo, "user".created_at, "user".updated_at, "user".is_super_user, "user".is_active, "user".verify_code 
+FROM "user"
+26-Aug-22 14:26:00 - sqlalchemy.engine.Engine - INFO - [generated in 0.00214s] ()
+26-Aug-22 14:26:00 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+26-Aug-22 16:35:58 - uvicorn.error - WARNING - StatReload detected changes in 'comunication/rabbit_consumer.py'. Reloading...
+26-Aug-22 16:35:58 - uvicorn.error - INFO - Shutting down
+26-Aug-22 16:35:58 - uvicorn.error - INFO - Waiting for application shutdown.
+26-Aug-22 16:35:58 - uvicorn - INFO - Shutting down...
+26-Aug-22 16:35:58 - uvicorn.error - INFO - Application shutdown complete.
+26-Aug-22 16:35:58 - uvicorn.error - INFO - Finished server process [23]
+26-Aug-22 16:36:29 - uvicorn.error - WARNING - StatReload detected changes in 'workers/celery.py'. Reloading...
+26-Aug-22 16:36:31 - uvicorn.error - INFO - Started server process [29]
+26-Aug-22 16:36:31 - uvicorn.error - INFO - Waiting for application startup.
+26-Aug-22 16:36:31 - uvicorn - INFO - INIT: ___Starting up___
+26-Aug-22 16:36:31 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+26-Aug-22 16:36:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 16:36:31 - sqlalchemy.engine.Engine - INFO - select current_schema()
+26-Aug-22 16:36:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 16:36:31 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+26-Aug-22 16:36:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 16:36:31 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+26-Aug-22 16:36:31 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+26-Aug-22 16:36:31 - sqlalchemy.engine.Engine - INFO - [generated in 0.00085s] ('user',)
+26-Aug-22 16:36:31 - sqlalchemy.engine.Engine - INFO - COMMIT
+26-Aug-22 16:36:31 - uvicorn - INFO - INIT: ___end___
+26-Aug-22 16:36:31 - uvicorn.error - INFO - Application startup complete.
+26-Aug-22 16:37:29 - uvicorn.error - INFO - Will watch for changes in these directories: ['/app']
+26-Aug-22 16:37:29 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+26-Aug-22 16:37:29 - uvicorn.error - INFO - Started reloader process [7] using StatReload
+26-Aug-22 16:37:31 - uvicorn.error - INFO - Started server process [10]
+26-Aug-22 16:37:31 - uvicorn.error - INFO - Waiting for application startup.
+26-Aug-22 16:37:31 - uvicorn - INFO - INIT: ___Starting up___
+26-Aug-22 16:37:31 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+26-Aug-22 16:37:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 16:37:31 - sqlalchemy.engine.Engine - INFO - select current_schema()
+26-Aug-22 16:37:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 16:37:31 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+26-Aug-22 16:37:31 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+26-Aug-22 16:37:31 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+26-Aug-22 16:37:31 - sqlalchemy.engine.Engine - INFO - select relname from pg_class c join pg_namespace n on n.oid=c.relnamespace where pg_catalog.pg_table_is_visible(c.oid) and relname=%s
+26-Aug-22 16:37:31 - sqlalchemy.engine.Engine - INFO - [generated in 0.00130s] ('user',)
+26-Aug-22 16:37:31 - sqlalchemy.engine.Engine - INFO - COMMIT
+26-Aug-22 16:37:31 - uvicorn - INFO - INIT: ___end___
+26-Aug-22 16:37:31 - uvicorn.error - INFO - Application startup complete.

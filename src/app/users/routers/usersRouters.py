@@ -24,7 +24,7 @@ router = APIRouter(
 
 @router.get("/", 
             status_code=status.HTTP_200_OK, 
-            response_model=List[UserOut], 
+            # response_model=List[UserOut], 
             )
 async def show_users(*, session : AsyncSession = Depends(get_session)): 
     """Show all users 
