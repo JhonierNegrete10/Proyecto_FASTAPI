@@ -10,7 +10,10 @@ from fastapi import Depends
 from fastapi import status
 
 
-from users.endpoints.usersEndpoints import *
+from app.users.endpoints.userEndpoints import *
+
+from security.token import TokenData
+from security.security import get_current_user
 
 import logging
 
@@ -26,7 +29,8 @@ router = APIRouter(
             status_code=status.HTTP_200_OK, 
             # response_model=List[UserOut], 
             )
-async def show_users(*, session : AsyncSession = Depends(get_session)): 
+async def show_users(*, session : AsyncSession = Depends(get_session), 
+                     current_user: TokenData = Depends(get_current_user)): 
     """Show all users 
     Returns:
        list of users 

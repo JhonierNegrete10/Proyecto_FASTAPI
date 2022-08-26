@@ -11292,3 +11292,9 @@ FROM "user"
 26-Aug-22 16:37:31 - sqlalchemy.engine.Engine - INFO - COMMIT
 26-Aug-22 16:37:31 - uvicorn - INFO - INIT: ___end___
 26-Aug-22 16:37:31 - uvicorn.error - INFO - Application startup complete.
+26-Aug-22 18:03:01 - uvicorn.error - WARNING - StatReload detected changes in 'comunication/rabbit_consumer.py'. Reloading...
+26-Aug-22 18:03:01 - uvicorn.error - INFO - Shutting down
+26-Aug-22 18:03:01 - uvicorn.error - INFO - Waiting for application shutdown.
+26-Aug-22 18:03:01 - uvicorn - INFO - Shutting down...
+26-Aug-22 18:03:01 - uvicorn.error - INFO - Application shutdown complete.
+26-Aug-22 18:03:01 - uvicorn.error - INFO - Finished server process [10]

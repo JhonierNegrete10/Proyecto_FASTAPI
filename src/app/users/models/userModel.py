@@ -70,7 +70,7 @@ class UserIn(UserBase):
  
         
 #Schema Of the user in the database  
-class User(UserIn, table= True): 
+class UserDB(UserIn, table= True): 
     """
      - model of the table, in the db  
     
@@ -91,6 +91,10 @@ class User(UserIn, table= True):
     is_active: bool = Field(default = False, 
             description="It is a active user when verify email code ")
     verify_code: Optional[str] = None 
+    principals = List[str] = Field(default=[])
+    
+    def principals(self):
+        return [f"user:{self.email}"]
 
 class UserOut(UserBase):
     first_name: str 

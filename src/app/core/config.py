@@ -16,6 +16,7 @@ class Settings(BaseSettings):
     DATABASE_URL = f"postgresql+asyncpg://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_SERVER}:{POSTGRES_PORT}/{POSTGRES_DB}"
     FIRST_SUPERUSER:str = os.getenv("FIRST_SUPERUSER")
     FIRST_SUPERUSER_PASSWORD :str = os.getenv("FIRST_SUPERUSER_PASSWORD")
-    
+    SECRET_KEY:str = os.getenv("SECRET_KEY")
+    ALGORITHM :str = os.getenv("ALGORITHM")
     
 settings = Settings()
