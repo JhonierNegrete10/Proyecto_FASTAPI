@@ -20,8 +20,14 @@ OAuth2PasswordRequestForm,
 SecurityScopes
 )
 
-from users.models.userModel import UserDB
-from security.token import TokenData, verify_token
+
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from db.databaseConfig import get_session
+
+# from users.models.userModel import UserDB
+from users.crud.userCrud import get_by_email
+from .tokens import TokenData, verify_token
 
 from passlib.context import CryptContext
 
@@ -44,7 +50,7 @@ class Hash():
         return pwd_context.verify(plain_password, hashed_password)
     
     
-def get_current_user(request:Request, token: str = Depends(oauth2_scheme)):
+def get_current_user( token: str = Depends(oauth2_scheme)):
     """
     get current user 
     """    
@@ -78,8 +84,11 @@ def get_current_user_only( token: str = Depends(oauth2_scheme)):
     return verify_token(token,credentials_exception)
 
 
-def get_active_principals(current_user: TokenData = Depends(get_current_user)):
+
+async def get_active_principals(current_user: TokenData = Depends(get_current_user), 
+                           session : AsyncSession = Depends(get_session)):
     
+    user = await get_by_email(email= current_user.sub, session=session)
     if user:
         # user is logged in
         principals = [Everyone, Authenticated]
@@ -87,4 +96,8 @@ def get_active_principals(current_user: TokenData = Depends(get_current_user)):
     else:
         # user is not logged in
         principals = [Everyone]
+
     return principals
+
+
+Permission = configure_permissions(get_active_principals)

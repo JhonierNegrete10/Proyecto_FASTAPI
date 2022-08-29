@@ -9,11 +9,11 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from db.databaseConfig import get_session
 
-from users.models.userModel import User
+from users.models.userModel import UserDB
 from core.config import settings
 import logging
 
-from users.security.security import Hash
+# from users.security.security import Hash
 # app.users.security.security
 log = logging.getLogger("uvicorn")
 
@@ -40,7 +40,7 @@ class CRUDUser():
         
 async def get_by_email(email, 
                        session : AsyncSession): 
-    query =select(User).where(User.email == email)
+    query =select(UserDB).where(UserDB.email == email)
     user_query = await session.execute(query)
     user=  user_query.scalars().first()
     return user
@@ -49,7 +49,7 @@ async def get_by_email(email,
 async def get_all(session: AsyncSession): 
     # async with session as client: 
     log.info("crud: entry")
-    result = await session.execute(select(User))
+    result = await session.execute(select(UserDB))
     # print(result)
     result = result.scalars().all()
     # print(result)
@@ -57,7 +57,7 @@ async def get_all(session: AsyncSession):
 
 
     
-async def create_user(user: User ,
+async def create_user(user: UserDB ,
                       session: AsyncSession): 
     log.info("crud: entry")
     session.add(user)
@@ -66,19 +66,28 @@ async def create_user(user: User ,
     return user
     
     
-async def put_super_user(session: AsyncSession):
+async def update_user(user: UserDB ,
+                      session: AsyncSession): 
+    """
+    """
+    session.add(user)
+    await session.commit()
+    await session.refresh(user)
+    return user
     
-    results = await session.execute(select(User).where(User.email == settings.FIRST_SUPERUSER))
-    user = results.first()
-    if not user: 
-        log.info("SUPERUSER")
-        user = User(email= settings.FIRST_SUPERUSER, 
-                    hashed_password= Hash.hash_password(settings.FIRST_SUPERUSER_PASSWORD), 
-                    is_super_user=True)
-        session.add(user)
-        await session.commit()
-        await session.refresh(user)
-        return {"super": "initializated"}     
+# async def put_super_user(session: AsyncSession):
+    
+#     results = await session.execute(select(UserDB).where(UserDB.email == settings.FIRST_SUPERUSER))
+#     user = results.first()
+#     if not user: 
+#         log.info("SUPERUSER")
+#         user = UserDB(email= settings.FIRST_SUPERUSER, 
+#                     hashed_password= Hash.hash_password(settings.FIRST_SUPERUSER_PASSWORD), 
+#                     is_super_user=True)
+#         session.add(user)
+#         await session.commit()
+#         await session.refresh(user)
+#         return {"super": "initializated"}     
 
 
 # user = CRUDUser()

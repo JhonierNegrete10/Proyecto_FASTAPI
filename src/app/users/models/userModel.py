@@ -91,10 +91,13 @@ class UserDB(UserIn, table= True):
     is_active: bool = Field(default = False, 
             description="It is a active user when verify email code ")
     verify_code: Optional[str] = None 
-    principals = List[str] = Field(default=[])
+    permissions: List[str] = Field(default=None)
+ #= [f"user:{self.email}"]
+    # principals : List[str] = Field(default=None)
     
     def principals(self):
-        return [f"user:{self.email}"]
+        # self.principals : List[str] = Field(default=None)
+        return self.permissions
 
 class UserOut(UserBase):
     first_name: str 

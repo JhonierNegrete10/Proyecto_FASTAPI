@@ -42,3 +42,29 @@ def verify_token(token:str,credentials_exception)-> TokenData:
     except JWTError:
         raise credentials_exception
     
+"""
+<<---------------RSA256----------->>
+import time
+from jose import jws
+from cryptography.hazmat.primitives import serialization as crypto_serialization
+from cryptography.hazmat.primitives.asymmetric import rsa
+from cryptography.hazmat.backends import default_backend as crypto_default_backend
+
+key = rsa.generate_private_key(backend=crypto_default_backend(), public_exponent=65537, key_size=2048)
+private_key = key.private_bytes(crypto_serialization.Encoding.PEM, crypto_serialization.PrivateFormat.PKCS8, crypto_serialization.NoEncryption())
+
+claims = {
+        'iss': 'https://e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com',
+        'sub': 'fdfdc610f849726e',
+        'aud': '20c875ad0d4bfc94',
+        'iat': time.time() - 20,
+        'exp': time.time() + 20,
+        'jti': '807443d3-3b27-4bf9-8e3e-e3f90e1ea055',
+        'typ': 'id_token'
+}
+
+print 'About to sign'
+signed = jws.sign(claims, private_key, algorithm='RS256')
+print signed
+
+"""

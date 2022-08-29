@@ -14,7 +14,7 @@ from db.databaseConfig import get_session
 
 from users.crud import userCrud 
 from users.models.userModel import *
-from users.security.security import Hash
+from users.Security.security import Hash
 
 import logging
 
@@ -50,11 +50,11 @@ async def create_user_db(user: UserIn,
 
     #todo change from userIn to User schema  
     log.info("endpoint: entry")
-    user =User(**user.dict())
-    
+    user_db =UserDB(**user.dict())
+    # user_db.principals= f"user:{user_db.email}"
     #todo: Add User to db by crud    
-    user_db = await userCrud.create_user(user, session)
-    return user_db
+    user_result = await userCrud.create_user(user_db, session)
+    return user_result
     # except Exception as e:
 
     #     raise HTTPException(
@@ -71,3 +71,21 @@ async def show_users_endpoint(session):
     users = await userCrud.get_all(session)
     
     return users
+
+async def change_permissions(email ,session): 
+    """
+    
+    """
+    
+    user: UserDB = await userCrud.get_by_email(email, session)
+    print("-"*30)
+    print(user.principals())
+    user.permissions = ["role:admin"]
+    return user.principals()
+    # if not  "role:admin" in user.principals: 
+    #     user.principals.append("role:admin")
+        
+    user = await userCrud.update_user(user, session)
+    
+    return user 
+    

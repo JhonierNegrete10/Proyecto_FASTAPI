@@ -10,10 +10,11 @@ from fastapi import Depends
 from fastapi import status
 
 
-from app.users.endpoints.userEndpoints import *
+from users.endpoints.userEndpoints import *
 
-from security.token import TokenData
-from security.security import get_current_user
+# from app.users.security import tokens
+from users.Security.tokens import TokenData
+from users.Security.security import get_current_user
 
 import logging
 
@@ -58,3 +59,15 @@ async def create_user(*,
     
     return user_out 
 
+
+@router.get("/me")
+async def permissions(*,
+                      email:str, 
+                      session : AsyncSession = Depends(get_session)): 
+    """
+    """
+    user = await change_permissions(email, session)
+    
+    return user 
+    
+    

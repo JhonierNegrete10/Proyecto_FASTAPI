@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import logging
-from db.init_database import init_database
+# from db.init_database import init_database
 
 from db.databaseConfig import init_db
 # from comunication.rabbit_init  import publish
@@ -9,9 +9,16 @@ from workers.tasks import create_order
 from celery.result import AsyncResult
 
 import users 
-from users import usersRouters 
-from users.models.userModel import User
+from users import userRouters 
+from users import userLogin
+from users.models.userModel import UserDB
+
+from items.routers import itemRouters
+from items.models.itemModel import ItemDB
+
 from docs.export_docs import markdown_exporter
+
+
 app = FastAPI(
     title="User Backend", 
     description=markdown_exporter.export_md_files_as_text()
@@ -25,7 +32,9 @@ logging.basicConfig(filename='app.log',
 
 log = logging.getLogger("uvicorn")
 
-app.include_router(usersRouters.router)
+app.include_router(userLogin.router)
+app.include_router(userRouters.router)
+app.include_router(itemRouters.router)
 
 @app.get("/")
 async def root():    
