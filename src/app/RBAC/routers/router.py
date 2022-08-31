@@ -11,7 +11,7 @@ from fastapi import  Query
 
 from typing import Optional, Any, List
 
-from concept.endpoints.conceptEndpoints import  *
+from RBAC.endpoints.RBACEndpoints import  *
 
 
 import logging

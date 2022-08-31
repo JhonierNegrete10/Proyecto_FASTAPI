@@ -18955,3 +18955,18 @@ WHERE userdb.email = %s
 31-Aug-22 12:39:03 - sqlalchemy.engine.Engine - INFO - COMMIT
 31-Aug-22 12:39:03 - uvicorn - INFO - INIT: ___end___
 31-Aug-22 12:39:03 - uvicorn.error - INFO - Application startup complete.
+31-Aug-22 12:42:17 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+31-Aug-22 12:42:17 - sqlalchemy.engine.Engine - INFO - SELECT userdb.email, userdb.birth_date, userdb.hashed_password, userdb.first_name, userdb.last_name, userdb.gender, userdb.phone, userdb.id, userdb.photo, userdb.created_at, userdb.updated_at, userdb.is_super_user, userdb.is_active, userdb.verify_code, userdb.permissions 
+FROM userdb 
+WHERE userdb.email = %s
+31-Aug-22 12:42:17 - sqlalchemy.engine.Engine - INFO - [generated in 0.00095s] ('admin@example.com',)
+31-Aug-22 12:42:17 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+31-Aug-22 17:02:25 - uvicorn.error - WARNING - StatReload detected changes in 'templete/routers/router.py'. Reloading...
+31-Aug-22 17:02:25 - uvicorn.error - INFO - Shutting down
+31-Aug-22 17:02:25 - uvicorn.error - INFO - Waiting for application shutdown.
+31-Aug-22 17:02:25 - uvicorn - INFO - Shutting down...
+31-Aug-22 17:02:25 - uvicorn.error - INFO - Application shutdown complete.
+31-Aug-22 17:02:25 - uvicorn.error - INFO - Finished server process [10]
+31-Aug-22 17:02:30 - uvicorn.error - INFO - Started server process [13]
+31-Aug-22 17:02:30 - uvicorn.error - INFO - Waiting for application startup.
+31-Aug-22 17:02:30 - uvicorn - INFO - INIT: ___Starting up___
