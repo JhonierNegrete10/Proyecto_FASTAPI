@@ -1,8 +1,10 @@
 from time import sleep
+from typing import Dict
 from celery import Celery
 from celery.utils.log import get_task_logger
 # import pika
 from comunication.rabbit_init  import EventProducer
+from comunication.rabbit_consumer  import EventConsumer 
 from workers.celery import app, celery_log
 
 """
@@ -21,7 +23,43 @@ def create_order(name, quantity):
 # Display log    
     celery_log.info(f"Order Complete!")
     print("_"*20)
-    EventProducer("admin")
+    rabbit = EventProducer()
+    rabbit.send_body()
     print("working")
     return {"message": f"Hi {name}, Your order has completed!",
             "order_quantity": quantity}
+    
+    
+@app.task(bin = True)
+def publish_user_created_task(data: Dict): 
+    celery_log.info(f"Order Complete!")
+    rabbit= EventProducer()
+    rabbit.send_body(body=data)
+    return {"result": data}
+    # return 
+    
+    
+@app.task(bin=True)
+def receive_user_published_task(): 
+    celery_log.info(f"Order Complete!")
+    rabbit = EventConsumer(queue_name="created")
+    data = rabbit.consume()
+    print(data)
+    return  data
+
+
+@app.task(bin=True)
+def receive_user_task(): 
+    celery_log.info(f"Order Complete!")
+    rabbit = EventConsumer(queue_name="created")
+    data = rabbit.get_queue()
+    print(data)
+    return data
+    
+
+@app.task(bin=True)
+def init_consume(): 
+    celery_log.info(f"Order Complete!")
+    rabbit = EventConsumer(queue_name="created")
+    data = rabbit.consume()
+    # return data 

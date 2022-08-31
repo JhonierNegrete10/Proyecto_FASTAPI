@@ -14,16 +14,16 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=database-async
 
-  pgadmin:
-      container_name: pgadmin
-      image: dpage/pgadmin4
-      environment:
-        - PGADMIN_DEFAULT_EMAIL=admin@membo.pro
-        - PGADMIN_DEFAULT_PASSWORD=calidad
-      ports:
-        - 5050:80
-      depends_on:
-        - db
+  # pgadmin:
+  #     container_name: pgadmin
+  #     image: dpage/pgadmin4
+  #     environment:
+  #       - PGADMIN_DEFAULT_EMAIL=admin@membo.pro
+  #       - PGADMIN_DEFAULT_PASSWORD=calidad
+  #     ports:
+  #       - 5050:80
+  #     depends_on:
+  #       - db
 
   backend:
     container_name: backend_prueba

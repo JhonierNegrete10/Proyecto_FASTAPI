@@ -7,7 +7,8 @@ routers -> endpoints -> CRUD
 
 from fastapi import HTTPException, status
 from fastapi import Depends 
-
+from fastapi.encoders import jsonable_encoder
+import json 
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from db.databaseConfig import get_session
@@ -15,6 +16,8 @@ from db.databaseConfig import get_session
 from users.crud import userCrud 
 from users.models.userModel import *
 from users.Security.security import Hash
+
+from workers.tasks import publish_user_created_task, receive_user_published_task, receive_user_task
 
 import logging
 
@@ -88,4 +91,41 @@ async def change_permissions(email ,session):
     user = await userCrud.update_user(user, session)
     
     return user 
+    
+    
+async def get_user_published_endpoint(): 
+    """
+    
+    """
+    # userCrud.recive_user_published_endpoint(email, session)
+    data = receive_user_published_task.delay()
+    return data 
+    
+    
+async def get_queue_published_endpoint(): 
+    """
+    
+    """
+    # userCrud.recive_user_published_endpoint(email, session)
+    data = receive_user_task()
+    
+    return json.loads( data )
+    
+    
+async def publish_user_created_endpoint(email, session): 
+    """
+    
+    """
+    # userCrud.recive_user_published_endpoint(email, session)
+    user = await userCrud.get_by_email(email, session)
+    data = jsonable_encoder(user)
+    data = json.dumps(data)
+    # print(data)
+    # msm = publish_user_created_task.delay(data)
+    task = publish_user_created_task.delay(data)
+    return   task.id
+
+
+    
+    
     

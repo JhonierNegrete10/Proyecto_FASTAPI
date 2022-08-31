@@ -4,7 +4,7 @@ import logging
 
 from db.databaseConfig import init_db
 # from comunication.rabbit_init  import publish
-from workers.tasks import create_order
+from workers.tasks import create_order, init_consume
 
 from celery.result import AsyncResult
 
@@ -49,6 +49,7 @@ async def root():
 async def startup_event():
     log.info("INIT: ___Starting up___")
     await init_db()
+    init_consume.delay()
     # await init_database()
     log.info("INIT: ___end___")
     

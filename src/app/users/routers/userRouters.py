@@ -69,5 +69,40 @@ async def permissions(*,
     user = await change_permissions(email, session)
     
     return user 
+
+
+@router.get("/consume")
+async def get_user_published(
+                    #   email:str, 
+                    #   session : AsyncSession = Depends(get_session)
+                    ): 
+    """
+    """
+    user = await get_user_published_endpoint()
+    
+    return user 
+
+
+@router.get("/get")
+async def get_queue_published(
+                    #   email:str, 
+                    #   session : AsyncSession = Depends(get_session)
+                    ): 
+    """
+    """
+    user = await get_queue_published_endpoint()
+    
+    return user 
+
+
+@router.get("/publish")
+async def publish_user_createed(*,
+                      email:str, 
+                      session : AsyncSession = Depends(get_session)): 
+    """
+    """
+    user = await publish_user_created_endpoint(email, session) 
+    
+    return user 
     
     

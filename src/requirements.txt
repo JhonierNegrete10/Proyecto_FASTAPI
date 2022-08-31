@@ -20,4 +20,5 @@ celery
 flower
 pika
 fastapi_permissions
+tk 
 # aiomqp
